@@ -2,340 +2,386 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Void Data Services | Business Data & Digital Solutions</title>
+<title>Void Data Services | Digital & Data Solutions</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" href="favicon.png">
-
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #050b1a;
-  color: #fff;
+body{margin:0;font-family:Arial,sans-serif;background:#050b1a;color:#fff}
+h1,h2,h3{color:#7dd3fc}
+.hero{text-align:center;padding:60px 20px}
+.hero img{max-width:260px}
+.cta-btn{background:#38bdf8;color:#000;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:bold;margin:5px;display:inline-block}
+
+.container{max-width:1100px;margin:auto;padding:40px 20px}
+.box{background:#020617;border:1px solid #1e293b;border-radius:14px;padding:25px;margin-bottom:30px}
+
+.fade{opacity:0;transform:translateY(20px);transition:.7s}
+.fade.show{opacity:1;transform:none}
+
+details{margin-bottom:12px}
+summary{cursor:pointer;font-weight:bold;color:#7dd3fc}
+summary::after{content:"  +"}
+details[open] summary::after{content:"  −"}
+
+.offer{border:2px solid #38bdf8;box-shadow:0 0 25px rgba(56,189,248,.3)}
+.countdown{color:#38bdf8;font-weight:bold}
+
+.founder{display:flex;flex-wrap:wrap;gap:25px;align-items:center}
+.founder img{width:180px;height:180px;border-radius:50%;object-fit:cover;border:3px solid #38bdf8}
+
+.testimonial{display:none}
+.testimonial.active{display:block}
+
+.whatsapp-float{
+  position:fixed;right:20px;bottom:90px;
+  background:#25D366;color:#fff;
+  width:60px;height:60px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:28px;text-decoration:none;z-index:999
 }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: radial-gradient(circle at top, #0b1c3d, #050b1a);
-}
-.hero img {
-  max-width: 260px;
-}
-.hero h1 {
-  font-size: 36px;
-  margin: 20px 0;
-}
-.hero p {
-  max-width: 800px;
-  margin: auto;
-  color: #cbd5e1;
-  font-size: 17px;
-  line-height: 1.8;
+.sticky-cta{
+  position:fixed;bottom:0;left:0;width:100%;
+  background:#020c1f;border-top:1px solid #1e293b;
+  display:flex;justify-content:center;gap:10px;padding:10px;z-index:998
 }
 
-/* SECTION */
-.section {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 0 20px;
+#adminPanel{
+  display:none;position:fixed;inset:0;
+  background:#050b1a;z-index:99999;
+  padding:20px;overflow:auto
 }
-.section h2 {
-  border-bottom: 2px solid #38bdf8;
-  padding-bottom: 8px;
-  margin-bottom: 25px;
-  color: #7dd3fc;
-}
-
-/* ACCORDION */
-details {
-  background: #020617;
-  border-radius: 12px;
-  margin-bottom: 14px;
-  border: 1px solid #1e293b;
-}
-summary {
-  cursor: pointer;
-  padding: 18px;
-  font-weight: bold;
-  color: #7dd3fc;
-}
-summary::after {
-  content: "+";
-  float: right;
-}
-details[open] summary::after {
-  content: "−";
-}
-.details-content {
-  padding: 15px 20px 25px;
-  color: #cbd5e1;
-  line-height: 1.7;
-}
-
-/* PRICING */
-.price-box {
-  background: #020617;
-  padding: 25px;
-  border-radius: 14px;
-  border: 1px solid #1e293b;
-  margin-bottom: 25px;
-}
-.price-box h3 {
-  color: #38bdf8;
-}
-
-/* FOUNDER */
-.founder {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  align-items: center;
-  background: #020617;
-  padding: 30px;
-  border-radius: 14px;
-  border: 1px solid #1e293b;
-}
-.founder img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #38bdf8;
-}
-.founder h3 {
-  color: #38bdf8;
-}
-
-/* TESTIMONIALS */
-.testimonial {
-  background: #020617;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #1e293b;
-  margin-bottom: 15px;
-}
-
-/* STARTER OFFER */
-.offer {
-  background: linear-gradient(135deg, #0ea5e9, #1e40af);
-  padding: 35px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 0 40px rgba(56,189,248,0.4);
-}
-.offer h2 {
-  color: #fff;
-}
-.countdown {
-  font-size: 26px;
-  font-weight: bold;
-  margin-top: 15px;
-}
-
-/* CONTACT */
-.contact {
-  background: #020617;
-  padding: 30px;
-  border-radius: 14px;
-  border: 1px solid #1e293b;
-}
-.contact input, .contact textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  border-radius: 8px;
-  border: none;
-}
-.contact button {
-  background: #38bdf8;
-  color: #000;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* STICKY CTA */
-.sticky-cta {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #020617;
-  border-top: 1px solid #1e293b;
-  display: flex;
-  justify-content: space-around;
-  padding: 12px;
-  z-index: 999;
-}
-.sticky-cta a {
-  background: #38bdf8;
-  color: #000;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp-float {
-  position: fixed;
-  right: 20px;
-  bottom: 80px;
-  background: #25D366;
-  color: #fff;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  text-decoration: none;
-  box-shadow: 0 0 25px rgba(0,0,0,0.5);
-}
-
-/* FADE IN */
-.fade-in {
-  opacity: 0;
-  transform: translateY(25px);
-  transition: 0.8s;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+#adminPanel input,#adminPanel textarea{width:100%;padding:10px;margin:6px 0 12px;border-radius:8px;border:none}
+#adminPanel button{padding:12px;border:none;border-radius:8px;background:#38bdf8;color:#000;font-weight:bold;width:100%}
 </style>
 </head>
 
 <body>
 
 <!-- HERO -->
-<div class="hero fade-in">
+<div class="hero fade">
   <img src="logo.png" alt="Void Data Services">
-  <h1>Accurate Digital Services That Help Your Business Run Better</h1>
-  <p>
-    Void Data Services delivers professional data entry, Excel management, web research, and affordable business website development for companies across India. We focus on accuracy, reliability, and long-term partnerships — helping you save time, reduce errors, and scale with confidence.
-  </p>
+  <h1 id="heroHeadline">Reliable Digital Services for Growing Businesses</h1>
+  <p>Data entry, Excel, web research & affordable websites — delivered accurately and on time.</p>
+  <a href="#contact" class="cta-btn">Get Free Quote</a>
+  <a href="https://wa.me/918709523430" class="cta-btn">WhatsApp Now</a>
+</div>
+
+<div class="container">
+
+<!-- COMMITMENTS -->
+<div class="box fade" id="commitmentText">
+  <h2>Our Commitment</h2>
+  <ul>
+    <li>✔ On-time delivery</li>
+    <li>✔ Trusted by Indian businesses</li>
+    <li>✔ Accuracy-focused quality checks</li>
+    <li>✔ Secure & confidential handling</li>
+    <li>✔ Long-term partnership approach</li>
+  </ul>
 </div>
 
 <!-- STARTER OFFER -->
-<div class="section fade-in">
-  <div class="offer">
-    <h2>🔥 Limited-Time Starter Business Offer</h2>
-    <p>
-      Professional one-page website + basic data setup to help you get started fast.
-    </p>
-    <h3>Starter Price: ₹2,499</h3>
-    <p>Valid till: <strong>28 February 2026</strong></p>
-    <div class="countdown" id="countdown"></div>
+<div class="box offer fade">
+  <h2>🔥 Limited-Time Starter Offer</h2>
+  <p>Valid till: <strong id="starterOfferDate">28 Feb 2026</strong></p>
+
+  <div id="starterOfferText">
+    <ul>
+      <li>✔ Data Entry (up to 100 records/pages)</li>
+      <li>✔ Excel Report / Basic Dashboard</li>
+      <li>✔ Web Research (up to 50 leads)</li>
+      <li>✔ One-Page Business Website</li>
+    </ul>
   </div>
+
+  <h3>Starter Price: <span id="starterOfferPrice">₹2,999</span></h3>
+  <div class="countdown" id="countdownTimer"></div>
+
+  <a href="https://wa.me/918709523430" class="cta-btn">Claim Offer on WhatsApp</a>
 </div>
 
-<!-- SERVICES -->
-<div class="section fade-in">
+<!-- SERVICES (EXPANDED + SEO + CASES) -->
+<div class="box fade">
   <h2>Our Core Services</h2>
 
   <details>
-    <summary>Data Entry Projects</summary>
-    <div class="details-content">
-      PDF/Image to Excel or Word, bulk data typing, CRM updates, and large-scale data processing with quality checks.
-      <br><strong>Pricing:</strong> ₹5–₹15 per page | ₹300–₹600/hour | Monthly ₹5,000+
-    </div>
+    <summary>🌐 Business Websites</summary>
+    <p>
+      We design and develop professional one-page and multi-page business websites that help you build trust, generate leads, and establish a strong online presence. All websites are mobile-friendly, fast-loading, and designed for small businesses and service providers.
+    </p>
+    <ul>
+      <li>✔ One-page & multi-page websites</li>
+      <li>✔ Mobile-responsive design</li>
+      <li>✔ Lead-focused layout</li>
+      <li>✔ Basic SEO setup</li>
+      <li>✔ WhatsApp & contact integration</li>
+    </ul>
+    <p><strong>Mini Case:</strong> Built a one-page service website for a local business to start receiving online inquiries within days.</p>
+    <p><strong>Price:</strong> <span id="priceWebsites">₹3,000 – ₹12,000+</span></p>
   </details>
 
   <details>
-    <summary>Excel Dashboards & Reports</summary>
-    <div class="details-content">
-      Sales reports, KPI dashboards, expense tracking, business summaries, and automation.
-      <br><strong>Pricing:</strong> ₹1,000–₹8,000+
-    </div>
+    <summary>📝 Data Entry Projects</summary>
+    <p>
+      We handle high-accuracy data entry from PDFs, scanned documents, images, handwritten forms, and online sources into Excel, Word, or business systems. Every project includes validation and quality checks to reduce errors.
+    </p>
+    <ul>
+      <li>✔ PDF/Image to Excel or Word</li>
+      <li>✔ CRM data updates</li>
+      <li>✔ Bulk data typing</li>
+      <li>✔ Data validation & formatting</li>
+    </ul>
+    <p><strong>Mini Case:</strong> Converted hundreds of PDF pages into structured Excel sheets for easy business reporting.</p>
+    <p><strong>Price:</strong> <span id="priceDataEntry">₹5 – ₹15 per page</span></p>
   </details>
 
   <details>
-    <summary>Web Research Projects</summary>
-    <div class="details-content">
-      Lead generation, company/email research, market & product research.
-      <br><strong>Pricing:</strong> ₹2–₹8 per lead | ₹300–₹700/hour
-    </div>
+    <summary>📊 Excel Dashboards & Reports</summary>
+    <p>
+      We create professional Excel reports and dashboards to help you track sales, expenses, KPIs, and business performance. Our dashboards make it easier to understand your data and make better decisions.
+    </p>
+    <ul>
+      <li>✔ Sales & revenue reports</li>
+      <li>✔ KPI dashboards</li>
+      <li>✔ Expense & budget tracking</li>
+      <li>✔ Automated Excel summaries</li>
+    </ul>
+    <p><strong>Mini Case:</strong> Built a sales & expense dashboard that reduced manual reporting time for a small business.</p>
+    <p><strong>Price:</strong> <span id="priceExcel">₹1,000 – ₹8,000+</span></p>
   </details>
 
   <details>
-    <summary>Business Website Development</summary>
-    <div class="details-content">
-      One-page & multi-page business websites, mobile responsive, SEO-ready.
-      <br><strong>Pricing:</strong> ₹3,000 – ₹12,000+
-    </div>
+    <summary>🔍 Web Research Projects</summary>
+    <p>
+      We provide accurate web research and data collection services including lead generation, company research, email research, and market analysis. Data is delivered in clean Excel format for easy use.
+    </p>
+    <ul>
+      <li>✔ Lead generation</li>
+      <li>✔ Company & email research</li>
+      <li>✔ Market & product research</li>
+      <li>✔ Data verification</li>
+    </ul>
+    <p><strong>Mini Case:</strong> Researched and delivered verified leads to support a client’s sales outreach campaign.</p>
+    <p><strong>Price:</strong> <span id="priceResearch">₹2 – ₹8 per lead</span></p>
   </details>
 </div>
 
-<!-- FOUNDER -->
-<div class="section fade-in">
-  <h2>About Us</h2>
-  <div class="founder">
-    <img src="founder.jpg" alt="Rahul Kumar - Founder">
-    <div>
-      <h3>Rahul Kumar — Founder & Operations Lead</h3>
-      <p>
-        Rahul Kumar founded Void Data Services to deliver accurate, secure, and business-grade digital services. With a strong focus on quality control, data confidentiality, and long-term partnerships, he personally oversees operations to ensure consistent, reliable results for every client.
-      </p>
-    </div>
-  </div>
+<!-- PORTFOLIO SHOWCASE -->
+<div class="box fade">
+  <h2>Service Portfolio Highlights</h2>
+
+  <details>
+    <summary>🌐 Business Website Projects</summary>
+    <ul>
+      <li>✔ One-page business websites</li>
+      <li>✔ Service landing pages</li>
+      <li>✔ Personal business websites</li>
+      <li>✔ Multi-page company websites</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>📝 Data Entry & Conversion Projects</summary>
+    <ul>
+      <li>✔ PDF to Excel conversions</li>
+      <li>✔ Image to Word/Excel</li>
+      <li>✔ CRM data entry</li>
+      <li>✔ Bulk typing projects</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>📊 Excel Dashboards & Reporting</summary>
+    <ul>
+      <li>✔ Sales dashboards</li>
+      <li>✔ Expense trackers</li>
+      <li>✔ KPI monitoring sheets</li>
+      <li>✔ Business summary reports</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>🔍 Web Research & Lead Generation</summary>
+    <ul>
+      <li>✔ Lead generation campaigns</li>
+      <li>✔ Company & email research</li>
+      <li>✔ Market research</li>
+      <li>✔ Product research</li>
+    </ul>
+  </details>
 </div>
 
 <!-- TESTIMONIALS -->
-<div class="section fade-in">
+<div class="box fade">
   <h2>Client Feedback</h2>
-  <div class="testimonial">⭐⭐⭐⭐⭐ "Very accurate data work and fast delivery."</div>
-  <div class="testimonial">⭐⭐⭐⭐⭐ "Professional Excel reports helped our business."</div>
-  <div class="testimonial">⭐⭐⭐⭐⭐ "Reliable service and great communication."</div>
+  <div class="testimonial active">“Very accurate work and fast delivery.”</div>
+  <div class="testimonial">“Professional Excel reports helped our business.”</div>
+  <div class="testimonial">“Reliable partner for ongoing data projects.”</div>
 </div>
 
-<!-- CONTACT -->
-<div class="section fade-in">
-  <h2>Get a Free Quote</h2>
-  <div class="contact">
-    <form action="https://formspree.io/f/xnjpwwwv" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Tell us about your project" required></textarea>
-      <button type="submit">Request Quote</button>
-    </form>
+<!-- ABOUT -->
+<div class="box fade">
+  <h2>About Us</h2>
+  <div class="founder">
+    <img src="Founder.jpg" alt="Rahul Kumar Founder">
+    <div>
+      <h3>Rahul Kumar — Founder & Operations Lead</h3>
+      <p>
+        Founder of Void Data Services, focused on accuracy, confidentiality, and long-term client relationships.
+      </p>
+      <p><strong>Email:</strong> voiddataservices@gmail.com</p>
+      <p><strong>WhatsApp:</strong> +918709523430</p>
+    </div>
   </div>
 </div>
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/918709523430" class="whatsapp-float" target="_blank">🟢</a>
+<!-- CONTACT -->
+<div class="box fade" id="contact">
+  <h2>Get a Free Quote</h2>
+  <form action="https://formspree.io/f/xnjpwwwv" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Tell us about your project" required></textarea>
+    <button type="submit" class="cta-btn">Send Request</button>
+  </form>
+</div>
+
+</div>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/918709523430" class="whatsapp-float">🟢</a>
 
 <!-- STICKY CTA -->
 <div class="sticky-cta">
-  <a href="https://wa.me/918709523430" target="_blank">WhatsApp Now</a>
-  <a href="#contact">Get Quote</a>
+  <a href="https://wa.me/918709523430" class="cta-btn">WhatsApp</a>
+  <a href="#contact" class="cta-btn">Get Quote</a>
 </div>
 
-<!-- COUNTDOWN + FADE SCRIPT -->
-<script>
-const endDate = new Date("Feb 28, 2026 23:59:59").getTime();
-setInterval(() => {
-  const now = new Date().getTime();
-  const diff = endDate - now;
-  const d = Math.floor(diff / (1000*60*60*24));
-  const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-  const m = Math.floor((diff % (1000*60*60)) / (1000*60));
-  document.getElementById("countdown").innerHTML =
-    d + "d " + h + "h " + m + "m remaining";
-}, 1000);
+<!-- ADMIN PANEL -->
+<div id="adminPanel">
+  <h2>🔐 Admin Panel</h2>
 
-const faders = document.querySelectorAll('.fade-in');
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add('visible');
+  <div id="adminLogin">
+    <input type="password" id="adminPass" placeholder="Admin Password">
+    <button onclick="adminLogin()">Login</button>
+  </div>
+
+  <div id="adminControls" style="display:none">
+    <label>Hero Headline</label>
+    <input id="adminHero">
+
+    <label>Starter Offer Price</label>
+    <input id="adminOfferPrice">
+
+    <label>Offer End Date</label>
+    <input id="adminOfferDate" type="date">
+
+    <label>Website Price</label>
+    <input id="adminPriceWebsites">
+
+    <label>Data Entry Price</label>
+    <input id="adminPriceDataEntry">
+
+    <label>Excel Price</label>
+    <input id="adminPriceExcel">
+
+    <label>Web Research Price</label>
+    <input id="adminPriceResearch">
+
+    <button onclick="saveAdmin()">Save Changes</button>
+    <button onclick="closeAdmin()">Close</button>
+  </div>
+</div>
+
+<script>
+/* Fade */
+const fades=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+  fades.forEach(f=>{
+    if(f.getBoundingClientRect().top < window.innerHeight-50){
+      f.classList.add('show');
+    }
   });
-}, { threshold: 0.2 });
-faders.forEach(el => obs.observe(el));
+});
+
+/* Testimonials */
+let ti=0;
+const tests=document.querySelectorAll('.testimonial');
+setInterval(()=>{
+  tests[ti].classList.remove('active');
+  ti=(ti+1)%tests.length;
+  tests[ti].classList.add('active');
+},4000);
+
+/* Secret Admin Trigger: click logo 5 times */
+let taps=0;
+document.querySelector('.hero img').addEventListener('click',()=>{
+  taps++;
+  if(taps>=5){document.getElementById('adminPanel').style.display='block';taps=0;}
+  setTimeout(()=>taps=0,1500);
+});
+
+/* Admin Logic */
+const ADMIN_PASSWORD="Voidlord2002";
+
+function adminLogin(){
+  if(adminPass.value===ADMIN_PASSWORD){
+    adminLogin.style.display="none";
+    adminControls.style.display="block";
+    loadAdmin();
+  } else {alert("Wrong password");}
+}
+
+function saveAdmin(){
+  localStorage.setItem("heroText",adminHero.value);
+  localStorage.setItem("offerPrice",adminOfferPrice.value);
+  localStorage.setItem("offerDate",adminOfferDate.value);
+  localStorage.setItem("priceWebsites",adminPriceWebsites.value);
+  localStorage.setItem("priceDataEntry",adminPriceDataEntry.value);
+  localStorage.setItem("priceExcel",adminPriceExcel.value);
+  localStorage.setItem("priceResearch",adminPriceResearch.value);
+  alert("Saved! Refresh page.");
+}
+
+function loadAdmin(){
+  adminHero.value=localStorage.getItem("heroText")||"";
+  adminOfferPrice.value=localStorage.getItem("offerPrice")||"";
+  adminOfferDate.value=localStorage.getItem("offerDate")||"";
+  adminPriceWebsites.value=localStorage.getItem("priceWebsites")||"";
+  adminPriceDataEntry.value=localStorage.getItem("priceDataEntry")||"";
+  adminPriceExcel.value=localStorage.getItem("priceExcel")||"";
+  adminPriceResearch.value=localStorage.getItem("priceResearch")||"";
+}
+
+function closeAdmin(){adminPanel.style.display="none";}
+
+/* Apply Admin Data */
+document.addEventListener("DOMContentLoaded",()=>{
+  if(localStorage.getItem("heroText")) heroHeadline.innerText=localStorage.getItem("heroText");
+  if(localStorage.getItem("offerPrice")) starterOfferPrice.innerText=localStorage.getItem("offerPrice");
+  if(localStorage.getItem("priceWebsites")) priceWebsites.innerText=localStorage.getItem("priceWebsites");
+  if(localStorage.getItem("priceDataEntry")) priceDataEntry.innerText=localStorage.getItem("priceDataEntry");
+  if(localStorage.getItem("priceExcel")) priceExcel.innerText=localStorage.getItem("priceExcel");
+  if(localStorage.getItem("priceResearch")) priceResearch.innerText=localStorage.getItem("priceResearch");
+});
+
+/* Countdown */
+function startCountdown(){
+  const endDate=localStorage.getItem("offerDate")||"2026-02-28";
+  const end=new Date(endDate+"T23:59:59").getTime();
+  setInterval(()=>{
+    const now=new Date().getTime();
+    const diff=end-now;
+    if(diff<=0){countdownTimer.innerText="Offer Expired";return;}
+    const d=Math.floor(diff/(1000*60*60*24));
+    const h=Math.floor((diff/(1000*60*60))%24);
+    const m=Math.floor((diff/(1000*60))%60);
+    const s=Math.floor((diff/1000)%60);
+    countdownTimer.innerText=`${d}d ${h}h ${m}m ${s}s`;
+  },1000);
+}
+startCountdown();
 </script>
 
 </body>
