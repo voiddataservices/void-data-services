@@ -1,327 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Void Data Services | Professional Data & Digital Solutions</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Void Data Services | Business Data & Digital Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Void Data Services provides professional data entry, Excel reporting, web research, and affordable business websites in India. Reliable digital solutions for growing businesses.">
+<link rel="icon" href="favicon.png">
 
-  <link rel="icon" type="image/png" href="favicon.png">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #050b1a;
+  color: #fff;
+}
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZY9FYW4NOR"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZY9FYW4NOR');
-  </script>
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: radial-gradient(circle at top, #0b1c3d, #050b1a);
+}
+.hero img {
+  max-width: 260px;
+}
+.hero h1 {
+  font-size: 36px;
+  margin: 20px 0;
+}
+.hero p {
+  max-width: 800px;
+  margin: auto;
+  color: #cbd5e1;
+  font-size: 17px;
+  line-height: 1.8;
+}
 
-  <style>
-    body {margin:0;font-family:Arial,sans-serif;background:#0a0f1f;color:#fff;}
-    header {background:#020617;padding:55px 20px;text-align:center;}
-    header img {max-width:240px;margin-bottom:15px;}
-    .hero-title {font-size:34px;margin-bottom:10px;}
-    .hero-summary {max-width:900px;margin:0 auto 20px;color:#cbd5e1;line-height:1.8;}
+/* SECTION */
+.section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+.section h2 {
+  border-bottom: 2px solid #38bdf8;
+  padding-bottom: 8px;
+  margin-bottom: 25px;
+  color: #7dd3fc;
+}
 
-    .cta-btn {display:inline-block;margin:10px;padding:14px 28px;background:#38bdf8;color:#020617;border-radius:30px;text-decoration:none;font-weight:bold;}
+/* ACCORDION */
+details {
+  background: #020617;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #1e293b;
+}
+summary {
+  cursor: pointer;
+  padding: 18px;
+  font-weight: bold;
+  color: #7dd3fc;
+}
+summary::after {
+  content: "+";
+  float: right;
+}
+details[open] summary::after {
+  content: "−";
+}
+.details-content {
+  padding: 15px 20px 25px;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
 
-    .container {max-width:1100px;margin:auto;padding:50px 20px;}
-    h2 {border-bottom:2px solid #38bdf8;padding-bottom:8px;margin-bottom:25px;}
+/* PRICING */
+.price-box {
+  background: #020617;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #1e293b;
+  margin-bottom: 25px;
+}
+.price-box h3 {
+  color: #38bdf8;
+}
 
-    .accordion {margin-bottom:14px;border-radius:12px;background:#020617;border:1px solid #1e293b;}
-    .accordion summary {padding:18px 22px;cursor:pointer;font-weight:600;color:#7dd3fc;display:flex;justify-content:space-between;}
-    .accordion summary::after {content:"+";font-size:22px;}
-    .accordion[open] summary::after {content:"−";}
-    .accordion-content {padding:16px 22px 22px;color:#e2e8f0;line-height:1.8;}
+/* FOUNDER */
+.founder {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  align-items: center;
+  background: #020617;
+  padding: 30px;
+  border-radius: 14px;
+  border: 1px solid #1e293b;
+}
+.founder img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #38bdf8;
+}
+.founder h3 {
+  color: #38bdf8;
+}
 
-    .starter-box {background:#081229;border:2px solid #38bdf8;border-radius:16px;padding:25px;margin-bottom:30px;box-shadow:0 0 25px rgba(56,189,248,0.2);}
+/* TESTIMONIALS */
+.testimonial {
+  background: #020617;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  margin-bottom: 15px;
+}
 
-    .urgency-box {background:linear-gradient(135deg,#1a0f1f,#081229);border:2px solid #ff6b6b;border-radius:18px;padding:25px;margin:20px 0 35px;text-align:center;box-shadow:0 0 30px rgba(255,107,107,0.25);}
+/* STARTER OFFER */
+.offer {
+  background: linear-gradient(135deg, #0ea5e9, #1e40af);
+  padding: 35px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(56,189,248,0.4);
+}
+.offer h2 {
+  color: #fff;
+}
+.countdown {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 15px;
+}
 
-    .slots-text {font-size:16px;font-weight:bold;color:#ffb3b3;margin-bottom:8px;}
-    .valid-till {font-size:14px;color:#ffd6d6;margin-bottom:12px;}
-    .countdown-text {font-size:15px;color:#ffd6d6;margin-bottom:12px;}
+/* CONTACT */
+.contact {
+  background: #020617;
+  padding: 30px;
+  border-radius: 14px;
+  border: 1px solid #1e293b;
+}
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: none;
+}
+.contact button {
+  background: #38bdf8;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    .countdown-timer {display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
-    .countdown-timer div {background:#020617;border:1px solid #ff6b6b;border-radius:10px;padding:10px 14px;min-width:70px;}
-    .countdown-timer span {font-size:22px;font-weight:bold;color:#ff6b6b;display:block;}
-    .countdown-timer small {font-size:11px;color:#ffcfcf;}
+/* STICKY CTA */
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #020617;
+  border-top: 1px solid #1e293b;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px;
+  z-index: 999;
+}
+.sticky-cta a {
+  background: #38bdf8;
+  color: #000;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
 
-    .trust {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;}
-    .trust-box {background:#020617;padding:18px;border-radius:10px;border:1px solid #1e293b;text-align:center;font-size:14px;}
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  background: #25D366;
+  color: #fff;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
 
-    .contact {background:#020617;padding:30px;border-radius:12px;border:1px solid #1e293b;}
-    .contact input,.contact textarea {width:100%;padding:12px;margin-bottom:12px;border-radius:8px;border:none;background:#020617;color:#fff;}
-    .contact button {width:100%;padding:14px;border:none;border-radius:30px;background:#38bdf8;color:#020617;font-weight:bold;}
-
-    footer {text-align:center;padding:30px;font-size:13px;color:#94a3b8;}
-
-    .whatsapp-float {position:fixed;bottom:20px;right:20px;background:#25D366;border-radius:50%;width:58px;height:58px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 25px rgba(0,0,0,0.4);z-index:999;font-size:26px;text-decoration:none;color:#fff;}
-  </style>
+/* FADE IN */
+.fade-in {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: 0.8s;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
 </head>
 
 <body>
 
-<header>
+<!-- HERO -->
+<div class="hero fade-in">
   <img src="logo.png" alt="Void Data Services">
-  <div class="hero-title">Accurate Digital Services That Help Your Business Run Better</div>
-  <div class="hero-summary">
-    Void Data Services delivers professional data entry, Excel management, web research, and affordable business website development for businesses across India. 
-    We focus on accuracy, reliability, and long-term partnerships — helping you reduce manual work, improve data quality, and build a stronger digital presence.
-  </div>
-
-  <a href="#contact" class="cta-btn">Request a Free Quote</a>
-  <a href="https://wa.me/918709523430" class="cta-btn" target="_blank">Chat on WhatsApp</a>
-</header>
-
-<div class="container">
-
-<h2>🚀 Limited-Time Starter Packages</h2>
-
-<div class="starter-box">
-
-  <div class="urgency-box">
-    <div class="slots-text">
-      🔥 Only <strong><span id="slot-count">5</span> Starter Slots</strong> Available
-    </div>
-    <div class="valid-till">
-      📅 Valid Till <strong><span id="offer-date-text">28 February 2026</span></strong>
-    </div>
-    <div class="countdown-text">⏳ Time Remaining:</div>
-
-    <div id="countdown-timer" class="countdown-timer">
-      <div><span id="days">00</span><small>Days</small></div>
-      <div><span id="hours">00</span><small>Hours</small></div>
-      <div><span id="minutes">00</span><small>Minutes</small></div>
-      <div><span id="seconds">00</span><small>Seconds</small></div>
-    </div>
-  </div>
-
-  <details class="accordion">
-    <summary>🌐 Starter One-Page Business Website</summary>
-    <div class="accordion-content">
-      ₹2,999 – ₹3,999<br>
-      ✔ One-page business website<br>
-      ✔ Mobile-friendly design<br>
-      ✔ Contact form + WhatsApp<br>
-      ✔ Delivery in 3–5 days
-    </div>
-  </details>
-
-  <details class="accordion">
-    <summary>📄 Starter Data Entry Package</summary>
-    <div class="accordion-content">
-      ₹499 – ₹999<br>
-      ✔ Up to 50 pages PDF/Image → Excel/Word<br>
-      ✔ Clean formatting<br>
-      ✔ 24–48 hour delivery
-    </div>
-  </details>
-
-</div>
-
-<h2>Data & Business Support Services</h2>
-
-<details class="accordion">
-  <summary>Data Entry Services</summary>
-  <div class="accordion-content">
-    Accurate and secure data entry from PDFs, scanned documents, handwritten forms, websites, and physical records into Excel, Word, or business systems.
-  </div>
-</details>
-
-<details class="accordion">
-  <summary>PDF to Excel / Word Conversion</summary>
-  <div class="accordion-content">
-    Convert PDF files into fully editable Excel and Word formats while preserving tables and layout.
-  </div>
-</details>
-
-<details class="accordion">
-  <summary>Image to Text Data Conversion</summary>
-  <div class="accordion-content">
-    Extract text and structured data from scanned images and photos using OCR and manual validation.
-  </div>
-</details>
-
-<details class="accordion">
-  <summary>Data Cleaning & Formatting</summary>
-  <div class="accordion-content">
-    Remove duplicates, fix errors, and standardize formats for business-ready datasets.
-  </div>
-</details>
-
-<details class="accordion">
-  <summary>Excel Data Management & Dashboards</summary>
-  <div class="accordion-content">
-    Excel reports, formulas, dashboards, and structured data management for business insights.
-  </div>
-</details>
-
-<details class="accordion">
-  <summary>Web Research & Lead Generation</summary>
-  <div class="accordion-content">
-    Lead generation, company research, email data collection, and market research.
-  </div>
-</details>
-
-<h2>Professional Pricing (Agency Standard)</h2>
-
-<details class="accordion">
-  <summary>Website Development</summary>
-  <div class="accordion-content">
-    One-page website: ₹4,000 – ₹7,000<br>
-    Multi-page website: ₹8,000 – ₹15,000+
-  </div>
-</details>
-
-<details class="accordion">
-  <summary>Data Entry & Processing</summary>
-  <div class="accordion-content">
-    ₹8 – ₹20 per page<br>
-    ₹400 – ₹700 per hour<br>
-    Monthly: ₹6,000 – ₹25,000+
-  </div>
-</details>
-
-<details class="accordion">
-  <summary>Excel Reports & Dashboards</summary>
-  <div class="accordion-content">
-    ₹1,500 – ₹10,000+ depending on complexity
-  </div>
-</details>
-
-<details class="accordion">
-  <summary>Web Research & Leads</summary>
-  <div class="accordion-content">
-    ₹3 – ₹10 per lead<br>
-    ₹400 – ₹800 per hour
-  </div>
-</details>
-
-<h2>Why Businesses Trust Void Data Services</h2>
-<div class="trust">
-  <div class="trust-box">🔒 Confidential Data Handling</div>
-  <div class="trust-box">⏱ On-Time Delivery Commitment</div>
-  <div class="trust-box">📁 Secure File Processing</div>
-  <div class="trust-box">📝 NDA Available on Request</div>
-  <div class="trust-box">⭐ Quality-Controlled Deliverables</div>
-  <div class="trust-box">🇮🇳 India-Based Business Support</div>
-</div>
-
-<h2>Contact & Free Consultation</h2>
-<div class="contact" id="contact">
-  <form action="https://formspree.io/f/xnjpwwwv" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Describe your project" required></textarea>
-    <button type="submit">Request Free Quote</button>
-  </form>
-
-  <p style="margin-top:15px;">
-    Email: voiddataservices@gmail.com<br>
-    WhatsApp: +91 87095 23430
+  <h1>Accurate Digital Services That Help Your Business Run Better</h1>
+  <p>
+    Void Data Services delivers professional data entry, Excel management, web research, and affordable business website development for companies across India. We focus on accuracy, reliability, and long-term partnerships — helping you save time, reduce errors, and scale with confidence.
   </p>
 </div>
 
+<!-- STARTER OFFER -->
+<div class="section fade-in">
+  <div class="offer">
+    <h2>🔥 Limited-Time Starter Business Offer</h2>
+    <p>
+      Professional one-page website + basic data setup to help you get started fast.
+    </p>
+    <h3>Starter Price: ₹2,499</h3>
+    <p>Valid till: <strong>28 February 2026</strong></p>
+    <div class="countdown" id="countdown"></div>
+  </div>
 </div>
 
-<footer>
-  © 2026 Void Data Services. All rights reserved.
-</footer>
+<!-- SERVICES -->
+<div class="section fade-in">
+  <h2>Our Core Services</h2>
 
-<a href="https://wa.me/918709523430" class="whatsapp-float" target="_blank">💬</a>
-
-<!-- SECRET ADMIN TRIGGER -->
-<div id="admin-trigger" style="position:fixed;bottom:5px;left:5px;width:25px;height:25px;opacity:0.05;"></div>
-
-<!-- ADMIN MODAL -->
-<div id="admin-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;">
-  <div style="background:#020617;border:2px solid #38bdf8;border-radius:16px;padding:25px;width:90%;max-width:400px;">
-    <h3 style="color:#38bdf8;text-align:center;">🔐 Admin Panel</h3>
-
-    <div id="admin-login">
-      <input type="password" id="admin-password" placeholder="Admin Password" style="width:100%;padding:12px;border-radius:8px;border:none;margin-bottom:10px;">
-      <button onclick="checkAdminPassword()" style="width:100%;padding:12px;background:#38bdf8;border:none;border-radius:8px;font-weight:bold;">Login</button>
-      <p id="admin-error" style="color:#ff6b6b;font-size:12px;display:none;text-align:center;">Wrong password</p>
+  <details>
+    <summary>Data Entry Projects</summary>
+    <div class="details-content">
+      PDF/Image to Excel or Word, bulk data typing, CRM updates, and large-scale data processing with quality checks.
+      <br><strong>Pricing:</strong> ₹5–₹15 per page | ₹300–₹600/hour | Monthly ₹5,000+
     </div>
+  </details>
 
-    <div id="admin-controls" style="display:none;">
-      <label>Starter Slots</label>
-      <input type="number" id="admin-slots" style="width:100%;padding:10px;border-radius:8px;border:none;margin-bottom:12px;">
+  <details>
+    <summary>Excel Dashboards & Reports</summary>
+    <div class="details-content">
+      Sales reports, KPI dashboards, expense tracking, business summaries, and automation.
+      <br><strong>Pricing:</strong> ₹1,000–₹8,000+
+    </div>
+  </details>
 
-      <label>Offer End Date</label>
-      <input type="date" id="admin-date" style="width:100%;padding:10px;border-radius:8px;border:none;margin-bottom:15px;">
+  <details>
+    <summary>Web Research Projects</summary>
+    <div class="details-content">
+      Lead generation, company/email research, market & product research.
+      <br><strong>Pricing:</strong> ₹2–₹8 per lead | ₹300–₹700/hour
+    </div>
+  </details>
 
-      <button onclick="saveAdminSettings()" style="width:100%;padding:12px;background:#38bdf8;border:none;border-radius:8px;font-weight:bold;">Save</button>
-      <button onclick="closeAdmin()" style="width:100%;padding:10px;border:1px solid #38bdf8;border-radius:8px;background:transparent;color:#38bdf8;margin-top:10px;">Close</button>
+  <details>
+    <summary>Business Website Development</summary>
+    <div class="details-content">
+      One-page & multi-page business websites, mobile responsive, SEO-ready.
+      <br><strong>Pricing:</strong> ₹3,000 – ₹12,000+
+    </div>
+  </details>
+</div>
+
+<!-- FOUNDER -->
+<div class="section fade-in">
+  <h2>About Us</h2>
+  <div class="founder">
+    <img src="founder.jpg" alt="Rahul Kumar - Founder">
+    <div>
+      <h3>Rahul Kumar — Founder & Operations Lead</h3>
+      <p>
+        Rahul Kumar founded Void Data Services to deliver accurate, secure, and business-grade digital services. With a strong focus on quality control, data confidentiality, and long-term partnerships, he personally oversees operations to ensure consistent, reliable results for every client.
+      </p>
     </div>
   </div>
 </div>
 
+<!-- TESTIMONIALS -->
+<div class="section fade-in">
+  <h2>Client Feedback</h2>
+  <div class="testimonial">⭐⭐⭐⭐⭐ "Very accurate data work and fast delivery."</div>
+  <div class="testimonial">⭐⭐⭐⭐⭐ "Professional Excel reports helped our business."</div>
+  <div class="testimonial">⭐⭐⭐⭐⭐ "Reliable service and great communication."</div>
+</div>
+
+<!-- CONTACT -->
+<div class="section fade-in">
+  <h2>Get a Free Quote</h2>
+  <div class="contact">
+    <form action="https://formspree.io/f/xnjpwwwv" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Tell us about your project" required></textarea>
+      <button type="submit">Request Quote</button>
+    </form>
+  </div>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/918709523430" class="whatsapp-float" target="_blank">🟢</a>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta">
+  <a href="https://wa.me/918709523430" target="_blank">WhatsApp Now</a>
+  <a href="#contact">Get Quote</a>
+</div>
+
+<!-- COUNTDOWN + FADE SCRIPT -->
 <script>
-  const ADMIN_PASSWORD = "Voidlord2002";
+const endDate = new Date("Feb 28, 2026 23:59:59").getTime();
+setInterval(() => {
+  const now = new Date().getTime();
+  const diff = endDate - now;
+  const d = Math.floor(diff / (1000*60*60*24));
+  const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+  const m = Math.floor((diff % (1000*60*60)) / (1000*60));
+  document.getElementById("countdown").innerHTML =
+    d + "d " + h + "h " + m + "m remaining";
+}, 1000);
 
-  let defaultSlots = 5;
-  let defaultEndDate = "2026-02-28";
-
-  let slots = localStorage.getItem("starterSlots") || defaultSlots;
-  let endDate = localStorage.getItem("starterEndDate") || defaultEndDate;
-
-  function updateOfferUI() {
-    document.getElementById("slot-count").innerText = slots;
-    document.getElementById("offer-date-text").innerText =
-      new Date(endDate).toLocaleDateString("en-IN",{day:"numeric",month:"long",year:"numeric"});
-  }
-  updateOfferUI();
-
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = new Date(endDate + "T23:59:59").getTime() - now;
-    if (distance < 0) return;
-
-    document.getElementById("days").innerText = Math.floor(distance / (1000*60*60*24));
-    document.getElementById("hours").innerText = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-    document.getElementById("minutes").innerText = Math.floor((distance%(1000*60*60))/(1000*60));
-    document.getElementById("seconds").innerText = Math.floor((distance%(1000*60))/1000);
-  }
-  updateCountdown();
-  setInterval(updateCountdown,1000);
-
-  let trigger = document.getElementById("admin-trigger");
-  let pressTimer;
-
-  trigger.addEventListener("touchstart",()=>pressTimer=setTimeout(openAdmin,1200));
-  trigger.addEventListener("mousedown",()=>pressTimer=setTimeout(openAdmin,1200));
-  trigger.addEventListener("touchend",()=>clearTimeout(pressTimer));
-  trigger.addEventListener("mouseup",()=>clearTimeout(pressTimer));
-
-  function openAdmin(){document.getElementById("admin-modal").style.display="flex";}
-  function closeAdmin(){document.getElementById("admin-modal").style.display="none";}
-
-  function checkAdminPassword(){
-    if(document.getElementById("admin-password").value===ADMIN_PASSWORD){
-      document.getElementById("admin-login").style.display="none";
-      document.getElementById("admin-controls").style.display="block";
-      document.getElementById("admin-slots").value=slots;
-      document.getElementById("admin-date").value=endDate;
-    } else {
-      document.getElementById("admin-error").style.display="block";
-    }
-  }
-
-  function saveAdminSettings(){
-    slots=document.getElementById("admin-slots").value;
-    endDate=document.getElementById("admin-date").value;
-    localStorage.setItem("starterSlots",slots);
-    localStorage.setItem("starterEndDate",endDate);
-    updateOfferUI();
-    alert("Starter offer updated!");
-    closeAdmin();
-  }
+const faders = document.querySelectorAll('.fade-in');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.2 });
+faders.forEach(el => obs.observe(el));
 </script>
 
 </body>
 </html>
-
