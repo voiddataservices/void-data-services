@@ -2,339 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Void Data Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Site Verification -->
+  <!-- SEO Title & Description -->
+  <title>Void Data Services | Data Entry, Data Management & Web Development in India</title>
+  <meta name="description" content="Void Data Services offers professional data entry, data processing, and affordable website development in India. Accurate, secure & fast digital services for businesses.">
+  <meta name="keywords" content="data entry services india, data processing services, web development india, freelance data entry, business data services, affordable website development">
+
+  <!-- Google Verification -->
   <meta name="google-site-verification" content="pialvn1N2bZJvgIXsdlyNy4J7oeiTDeTXw06Od9du24" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Void Data Services | Data Entry & Web Development in India">
+  <meta property="og:description" content="Professional data entry, data processing & affordable website development services by Void Data Services.">
+  <meta property="og:url" content="https://voiddataservices.github.io/void-data-services/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://voiddataservices.github.io/void-data-services/logo.png">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0a0f1f;
-      color: #ffffff;
-      text-align: center;
-    }
-
-    header {
-      background: linear-gradient(135deg, #020617, #020c1f);
-      padding: 35px 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    }
-
-    header img {
-      max-width: 260px;
-      height: auto;
-      margin-bottom: 12px;
-    }
-
-    h1 {
-      margin: 5px 0;
-      letter-spacing: 1px;
-    }
-
-    .tagline {
-      color: #38bdf8;
-      font-size: 16px;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
-    }
-
-    .container {
-      padding: 40px 20px;
-    }
-
-    .section {
-      max-width: 950px;
-      margin: 0 auto 50px auto;
-      text-align: left;
-    }
-
-    .section h2 {
-      border-bottom: 2px solid #38bdf8;
-      padding-bottom: 8px;
-      margin-bottom: 25px;
-      letter-spacing: 0.5px;
-    }
-
-    /* PREMIUM ACCORDION */
-    .service-item {
-      margin-bottom: 14px;
-      border-radius: 12px;
-      overflow: hidden;
-      background: linear-gradient(145deg, #020617, #020c1f);
-      box-shadow: 0 0 0 rgba(56,189,248,0);
-      transition: box-shadow 0.3s ease;
-    }
-
-    .service-item:hover {
-      box-shadow: 0 0 25px rgba(56,189,248,0.15);
-    }
-
-    .service-item summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 18px 22px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: 0.4px;
-
-      color: #7dd3fc;
-      background: linear-gradient(90deg, #020617, #020c1f);
-    }
-
-    .service-item summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .service-item summary::after {
-      content: "+";
-      font-size: 22px;
-      font-weight: bold;
-      color: #38bdf8;
-      transition: transform 0.3s ease;
-    }
-
-    .service-item[open] summary::after {
-      content: "−";
-      transform: rotate(180deg);
-    }
-
-    .service-content {
-      padding: 16px 22px 22px 22px;
-      font-size: 14.5px;
-      line-height: 1.75;
-      color: #e2e8f0;
-      animation: fadeSlide 0.35s ease;
-    }
-
-    @keyframes fadeSlide {
-      from {
-        opacity: 0;
-        transform: translateY(-8px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* PRICING */
-    .pricing-box {
-      background: linear-gradient(145deg, #020617, #020c1f);
-      padding: 25px;
-      border-radius: 12px;
-      margin-bottom: 25px;
-      border: 1px solid #1e293b;
-    }
-
-    .pricing-box h3 {
-      color: #38bdf8;
-      margin-top: 0;
-      letter-spacing: 0.5px;
-    }
-
-    .pricing-box ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .pricing-box li {
-      padding: 6px 0;
-      color: #cbd5e1;
-    }
-
-    /* CONTACT */
-    .contact {
-      background: linear-gradient(145deg, #020617, #020c1f);
-      padding: 30px;
-      border-radius: 12px;
-      max-width: 950px;
-      margin: 0 auto;
-      text-align: left;
-      border: 1px solid #1e293b;
-    }
-
-    .contact h2 {
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    .contact p {
-      margin: 10px 0;
-      font-size: 15px;
-    }
-
-    .contact a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 13px;
-      color: #94a3b8;
-      padding-bottom: 25px;
-      letter-spacing: 0.5px;
-    }
-
-    /* WHATSAPP FLOAT */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: #fff;
-      border-radius: 50%;
-      width: 58px;
-      height: 58px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 26px;
-      text-decoration: none;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-      z-index: 999;
-    }
-  </style>
+  <link rel="icon" href="favicon.png">
 </head>
 
 <body>
 
-<header>
-  <img src="logo.png" alt="Void Data Services Logo">
-  <h1>Void Data Services</h1>
-  <p class="tagline">Accurate. Reliable. On Time.</p>
-</header>
+  <header>
+    <h1>Void Data Services</h1>
+    <p>Professional Data Entry, Data Management & Web Development Services in India</p>
+  </header>
 
-<div class="container">
-
-  <!-- DATA SERVICES -->
-  <div class="section">
-    <h2>Data Services</h2>
-
-    <details class="service-item">
-      <summary>Data Entry Services</summary>
-      <div class="service-content">
-        We provide accurate and secure data entry from PDFs, scanned documents, handwritten forms, websites, and physical records into Excel, Word, or databases. Our process includes validation, formatting, and quality checks to ensure reliable and business-ready data.
-      </div>
-    </details>
-
-    <details class="service-item">
-      <summary>PDF to Excel / Word Conversion</summary>
-      <div class="service-content">
-        We convert PDF files into fully editable Excel and Word formats while preserving layout, tables, and structure. Scanned PDFs are processed using OCR when required to deliver searchable and editable business documents.
-      </div>
-    </details>
-
-    <details class="service-item">
-      <summary>Image to Text Data Conversion</summary>
-      <div class="service-content">
-        We extract text and structured data from images, scanned photos, and screenshots into clean, editable formats. Ideal for receipts, ID records, printed forms, and image-based business documents.
-      </div>
-    </details>
-
-    <details class="service-item">
-      <summary>Data Cleaning & Formatting</summary>
-      <div class="service-content">
-        We clean messy datasets by removing duplicates, fixing errors, standardizing formats, correcting spelling, and organizing columns. This ensures high-quality, analysis-ready, and professional business data.
-      </div>
-    </details>
-
-    <details class="service-item">
-      <summary>Excel Data Management</summary>
-      <div class="service-content">
-        We manage large Excel files by organizing sheets, applying formulas, sorting, filtering, and structuring data for easy tracking, reporting, and business decision-making.
-      </div>
-    </details>
-
-    <details class="service-item">
-      <summary>Web Research & Data Collection</summary>
-      <div class="service-content">
-        We research websites and online sources to collect targeted business data such as company details, contacts, emails, pricing, and market information. Delivered in clean Excel or CSV formats.
-      </div>
-    </details>
-  </div>
-
-  <!-- WEBSITE DEVELOPMENT -->
-  <div class="section">
-  <h2>Website Development Services</h2>
-
-  <details class="service-item">
-    <summary>One-Page Website</summary>
-    <div class="service-content">
-      <p><strong>Starting from ₹3,000</strong></p>
-      <ul>
-        <li>✔ Home + Services + Contact</li>
-        <li>✔ Mobile-friendly modern design</li>
-        <li>✔ GitHub/Netlify hosting setup</li>
-        <li>✔ Basic SEO (title + description)</li>
-        <li>✔ Free support for 7 days</li>
-      </ul>
-    </div>
-  </details>
-
-  <details class="service-item">
-    <summary>Multi-Page Website </summary>
-    <div class="service-content">
-      <p><strong>Starting from ₹7,000+</strong></p>
-      <ul>
-        <li>✔ Home, About, Services, Contact, etc.</li>
-        <li>✔ Premium professional design</li>
-        <li>✔ Contact form</li>
-        <li>✔ Basic SEO</li>
-        <li>✔ Free support for 15 days</li>
-      </ul>
-    </div>
-  </details>
-
-  </div>
-
-  <!-- CONTACT -->
-  <div class="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Founder:</strong> Rahul Kumar</p>
-    <p><strong>Email:</strong> 
-      <a href="mailto:voiddataservices@gmail.com">voiddataservices@gmail.com</a>
+  <section>
+    <h2>Professional Data Entry Services</h2>
+    <p>
+      Void Data Services provides accurate, fast, and confidential data entry services for businesses,
+      startups, and professionals. We handle bulk data entry, online data entry, PDF to Excel,
+      and database updates with high precision.
     </p>
-    <p><strong>Phone / WhatsApp:</strong> +91 87095 23430</p>
-    <p><strong>Website:</strong> 
-      <a href="https://voiddataservices.github.io/void-data-services/" target="_blank">
-        https://voiddataservices.github.io/void-data-services/
-      </a>
+  </section>
+
+  <section>
+    <h2>Data Processing & Data Management Solutions</h2>
+    <p>
+      We help businesses clean, organize, and manage their data efficiently.
+      Our data processing services include data cleaning, data validation,
+      formatting, and database management to improve accuracy and productivity.
     </p>
-  </div>
+  </section>
 
-</div>
+  <section>
+    <h2>Affordable Website Development Services</h2>
+    <p>
+      Get a modern, mobile-friendly, and SEO-ready website at an affordable price.
+      We build business websites, one-page websites, and multi-page websites
+      to help you grow your online presence and attract more customers.
+    </p>
+  </section>
 
-<footer>
-  <p>© 2026 Void Data Services. All rights reserved.</p>
-</footer>
+  <section>
+    <h2>Why Choose Void Data Services?</h2>
+    <ul>
+      <li>✔ High Accuracy & Quality Assurance</li>
+      <li>✔ Affordable & Transparent Pricing</li>
+      <li>✔ Fast Turnaround Time</li>
+      <li>✔ Secure & Confidential Data Handling</li>
+      <li>✔ Professional Support & Free Initial Guidance</li>
+    </ul>
+  </section>
 
-<!-- WHATSAPP FLOAT BUTTON -->
-<a href="https://wa.me/918709523430" 
-   class="whatsapp-float" 
-   target="_blank" 
-   aria-label="Chat on WhatsApp">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-       alt="WhatsApp Chat">
-</a>
+  <section>
+    <h2>Trusted Digital Services Across India</h2>
+    <p>
+      Based in India, Void Data Services supports clients across the country
+      with reliable data entry and website development services.
+      We help small businesses, startups, and professionals grow digitally.
+    </p>
+  </section>
+
+  <!-- Keep your Contact Section + WhatsApp Button BELOW this -->
+  <!-- DO NOT REMOVE THEM -->
+
+  <footer>
+    <p>© 2026 Void Data Services. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
-
-
-
-
