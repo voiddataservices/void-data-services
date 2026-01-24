@@ -17,15 +17,16 @@
 
   <style>
     body {margin:0;font-family:Arial,sans-serif;background:#0a0f1f;color:#fff;}
-    header {text-align:center;padding:40px 15px;background:#020617;}
-    header img {max-width:220px;margin-bottom:10px;}
-    .tagline {color:#38bdf8;}
+    header {text-align:center;padding:50px 15px;background:#020617;}
+    header img {max-width:220px;margin-bottom:12px;}
+    .tagline {color:#38bdf8;font-weight:bold;letter-spacing:1px;}
+    .hero-summary {max-width:900px;margin:20px auto 0;color:#cbd5e1;font-size:16px;line-height:1.8;}
 
     nav a {color:#7dd3fc;margin:0 8px;text-decoration:none;font-size:14px;}
 
     .section {
-      max-width:1000px;
-      margin:70px auto;
+      max-width:1050px;
+      margin:80px auto;
       padding:0 20px;
       opacity:0;
       transform:translateY(40px);
@@ -33,67 +34,74 @@
     }
     .section.show {opacity:1;transform:translateY(0);}
 
-    h2 {border-bottom:2px solid #38bdf8;padding-bottom:8px;margin-bottom:25px;}
+    h2 {border-bottom:2px solid #38bdf8;padding-bottom:8px;margin-bottom:30px;}
 
     .box {
       background:#020c1f;
-      border-radius:12px;
-      padding:25px;
+      border-radius:14px;
+      padding:28px;
       border:1px solid #1e293b;
-      margin-bottom:20px;
+      margin-bottom:25px;
+      line-height:1.8;
+      color:#e2e8f0;
     }
 
     /* ACCORDION */
     details {
       background:#020c1f;
-      border-radius:10px;
-      margin-bottom:12px;
-      padding:15px 20px;
+      border-radius:12px;
+      margin-bottom:14px;
+      padding:18px 22px;
+      border:1px solid #1e293b;
     }
     summary {
       cursor:pointer;
-      font-weight:bold;
+      font-weight:600;
       color:#7dd3fc;
       display:flex;
       justify-content:space-between;
+      align-items:center;
     }
-    summary::after {content:"+";font-size:20px;}
+    summary::after {content:"+";font-size:22px;}
     details[open] summary::after {content:"−";}
 
     /* GRID */
     .grid {
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:22px;
     }
     .card {
       background:#020c1f;
       border:1px solid #1e293b;
-      border-radius:12px;
-      padding:20px;
+      border-radius:14px;
+      padding:22px;
+      line-height:1.7;
     }
 
     /* FORM */
     input, textarea {
       width:100%;
-      padding:10px;
-      margin:8px 0;
+      padding:12px;
+      margin:10px 0;
       border-radius:6px;
       border:none;
+      font-size:14px;
     }
     button {
       background:#38bdf8;
       color:#000;
-      padding:12px 22px;
+      padding:14px 26px;
       border:none;
       border-radius:6px;
       font-weight:bold;
       cursor:pointer;
+      font-size:14px;
     }
 
     footer {
       text-align:center;
-      padding:35px;
+      padding:40px;
       font-size:13px;
       color:#94a3b8;
     }
@@ -104,24 +112,22 @@
       bottom:20px;
       right:20px;
       background:#25D366;
-      color:#fff;
       border-radius:50%;
-      width:58px;
-      height:58px;
+      width:60px;
+      height:60px;
       display:flex;
       align-items:center;
       justify-content:center;
-      font-size:26px;
-      text-decoration:none;
       box-shadow:0 8px 25px rgba(0,0,0,0.4);
       z-index:999;
     }
+    .whatsapp-float img {width:32px;height:32px;}
 
     /* MOBILE */
     @media(max-width:600px){
       header img{max-width:180px;}
-      .box{font-size:14px;}
-      nav a{display:inline-block;margin:5px;}
+      .hero-summary{font-size:14px;}
+      nav a{display:inline-block;margin:6px;}
     }
   </style>
 </head>
@@ -131,9 +137,15 @@
 <header>
   <img src="logo.png" alt="Void Data Services">
   <h1>Void Data Services</h1>
-  <p class="tagline">Accurate. Reliable. On Time.</p>
+  <p class="tagline">Accuracy. Reliability. Results.</p>
+
+  <p class="hero-summary">
+    Accurate Digital Services That Help Your Business Run Better.<br><br>
+    Void Data Services provides reliable data entry, Excel management, web research, and affordable website development for businesses across India. 
+    We focus on accuracy, speed, and long-term client relationships — so you can save time, reduce errors, and grow your business with confidence.
+  </p>
+
   <nav>
-    <a href="#summary">Home</a>
     <a href="#services">Services</a>
     <a href="#web">Web</a>
     <a href="#portfolio">Portfolio</a>
@@ -142,97 +154,136 @@
   </nav>
 </header>
 
-<!-- SUMMARY -->
-<div class="section" id="summary">
-  <h2>Business Summary</h2>
+<!-- ABOUT -->
+<div class="section" id="about">
+  <h2>About Void Data Services</h2>
   <div class="box">
-    Void Data Services provides professional data entry, data management, and affordable website development services.
-    We help businesses save time, reduce errors, and build a strong digital presence with reliable, accurate solutions.
+    Void Data Services is a digital services firm focused on delivering high-accuracy data solutions and professional web development for growing businesses. 
+    Founded by <strong>Rahul Kumar</strong>, our mission is to help organizations streamline operations, reduce manual workload, and improve digital efficiency.
+    <br><br>
+    We work with startups, small businesses, and service-based companies to provide dependable data handling, clean reporting systems, and strong online presence — 
+    built on trust, consistency, and long-term partnerships.
   </div>
 </div>
 
 <!-- DATA SERVICES -->
 <div class="section" id="services">
-  <h2>Data Services</h2>
+  <h2>Data & Business Support Services</h2>
 
-  <details><summary>Data Entry Services</summary>Accurate data entry from PDFs, scans, handwritten forms, and websites.</details>
-  <details><summary>PDF to Excel / Word</summary>Editable conversion while maintaining formatting.</details>
-  <details><summary>Image to Text Conversion</summary>Extract text and structured data from images.</details>
-  <details><summary>Data Cleaning & Formatting</summary>Remove duplicates, fix errors, standardize formats.</details>
-  <details><summary>Excel Data Management</summary>Organize, sort, filter, and apply formulas.</details>
-  <details><summary>Web Research & Data Collection</summary>Collect business leads, contacts, and market data.</details>
+  <details><summary>Data Entry Services</summary>
+    Accurate and secure data entry from PDFs, scanned documents, handwritten forms, and online sources into structured business formats.
+  </details>
+
+  <details><summary>PDF to Excel / Word Conversion</summary>
+    Professional conversion of PDFs into fully editable Excel and Word documents while preserving layout and structure.
+  </details>
+
+  <details><summary>Image to Text Conversion</summary>
+    Extraction of clean, editable data from scanned images, photos, and screenshots for business use.
+  </details>
+
+  <details><summary>Data Cleaning & Formatting</summary>
+    Removal of duplicates, correction of errors, and standardization of data for analysis-ready and professional datasets.
+  </details>
+
+  <details><summary>Excel Data Management</summary>
+    Organization, formulas, reporting structure, and Excel system setup for efficient business tracking.
+  </details>
+
+  <details><summary>Web Research & Data Collection</summary>
+    Targeted online research to collect verified business data including leads, contacts, and market information.
+  </details>
 </div>
 
 <!-- WEBSITE DEVELOPMENT -->
 <div class="section" id="web">
-  <h2>Website Development</h2>
+  <h2>Website Development Solutions</h2>
 
   <details>
-    <summary>One-Page Website (₹3,000)</summary>
-    Home + Services + Contact<br>
-    Mobile-friendly design<br>
-    Hosting setup<br>
-    Free support for 7 days
+    <summary>One-Page Business Website</summary>
+    <strong>Investment Range:</strong> ₹3,000 – ₹6,000<br><br>
+    Designed for small businesses and professionals who need a strong online presence quickly.<br>
+    ✔ Custom one-page design<br>
+    ✔ Mobile-friendly layout<br>
+    ✔ Hosting & deployment setup<br>
+    ✔ Basic on-page SEO<br>
+    ✔ 7 days post-launch support
   </details>
 
   <details>
-    <summary>Multi-Page Website (₹7,000+)</summary>
-    Home, About, Services, Contact<br>
-    Professional design<br>
-    Contact form<br>
-    Free support for 15 days
+    <summary>Multi-Page Business Website</summary>
+    <strong>Investment Range:</strong> ₹7,000 – ₹15,000+<br><br>
+    Ideal for growing businesses that require multiple service and information pages.<br>
+    ✔ 3–5 professional pages<br>
+    ✔ Premium business design<br>
+    ✔ Contact form integration<br>
+    ✔ Basic SEO structure<br>
+    ✔ 15 days post-launch support
   </details>
 </div>
 
 <!-- PORTFOLIO -->
 <div class="section" id="portfolio">
-  <h2>Portfolio</h2>
-  <div class="grid">
-    <div class="card">Business Websites</div>
-    <div class="card">Data Entry Projects</div>
-    <div class="card">Excel Dashboards</div>
-    <div class="card">Web Research Projects</div>
-  </div>
-</div>
+  <h2>Project Categories & Typical Pricing</h2>
 
-<!-- ABOUT -->
-<div class="section" id="about">
-  <h2>About Us</h2>
-  <div class="box">
-    Founded by <strong>Rahul Kumar</strong>, Void Data Services focuses on accuracy, trust, and long-term client relationships.
-    We support startups, small businesses, and professionals with dependable digital services across India.
-  </div>
+  <details>
+    <summary>Business Websites</summary>
+    One-page websites: ₹3,000 – ₹6,000<br>
+    Multi-page websites: ₹7,000 – ₹15,000+<br>
+    Custom business systems: ₹15,000+
+  </details>
+
+  <details>
+    <summary>Data Entry Projects</summary>
+    PDF/Image to Excel/Word: ₹5 – ₹15 per page<br>
+    Bulk data projects: ₹300 – ₹600 per hour<br>
+    Monthly data contracts: ₹5,000 – ₹20,000+
+  </details>
+
+  <details>
+    <summary>Excel Dashboards & Reports</summary>
+    Basic reports: ₹1,000 – ₹3,000<br>
+    Interactive dashboards: ₹3,000 – ₹8,000<br>
+    Advanced automation: ₹8,000+
+  </details>
+
+  <details>
+    <summary>Web Research Projects</summary>
+    Lead generation: ₹2 – ₹8 per lead<br>
+    Research hourly: ₹300 – ₹700 per hour<br>
+    Monthly research: ₹5,000 – ₹25,000+
+  </details>
 </div>
 
 <!-- TESTIMONIALS -->
 <div class="section">
-  <h2>What Clients Say</h2>
-  <div class="box">⭐ "Fast and accurate work. Highly recommended."</div>
-  <div class="box">⭐ "Professional website at affordable price."</div>
-  <div class="box">⭐ "Great communication and support."</div>
+  <h2>Client Feedback</h2>
+  <div class="box">⭐ "Consistent accuracy and fast turnaround. Very professional service."</div>
+  <div class="box">⭐ "Clean data delivery and excellent communication throughout."</div>
+  <div class="box">⭐ "Affordable website solution delivered exactly as required."</div>
 </div>
 
 <!-- FAQ -->
 <div class="section">
-  <h2>FAQ</h2>
-  <details><summary>How fast is delivery?</summary>Most small projects are delivered within 24–72 hours.</details>
-  <details><summary>Is my data secure?</summary>Yes, we maintain strict confidentiality.</details>
-  <details><summary>Do you offer revisions?</summary>Yes, revisions included during support period.</details>
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>How fast is delivery?</summary>Most small projects are delivered within 24–72 hours depending on scope.</details>
+  <details><summary>Is my business data secure?</summary>Yes, all client data is handled with strict confidentiality.</details>
+  <details><summary>Do you offer ongoing support?</summary>Yes, support is included based on selected service package.</details>
 </div>
 
 <!-- CONTACT -->
 <div class="section" id="contact">
-  <h2>Contact Us</h2>
+  <h2>Get in Touch</h2>
   <div class="box">
     <form action="https://formspree.io/f/xnjpwwwv" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <textarea name="message" rows="5" placeholder="Tell us about your project" required></textarea>
+      <button type="submit">Request a Quote</button>
     </form>
 
     <p><strong>Email:</strong> voiddataservices@gmail.com</p>
-    <p><strong>WhatsApp:</strong> +91 8709523430</p>
+    <p><strong>WhatsApp:</strong> +91 87095 23430</p>
   </div>
 </div>
 
@@ -240,7 +291,10 @@
   © 2026 Void Data Services. All rights reserved.
 </footer>
 
-<a href="https://wa.me/918709523430" class="whatsapp-float" target="_blank">💬</a>
+<!-- WhatsApp Button -->
+<a href="https://wa.me/918709523430" class="whatsapp-float" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
 
 <script>
   const sections = document.querySelectorAll('.section');
