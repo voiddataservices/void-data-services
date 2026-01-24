@@ -40,12 +40,6 @@ details[open] summary::after{content:"  −"}
   font-size:28px;text-decoration:none;z-index:999
 }
 
-.sticky-cta{
-  position:fixed;bottom:0;left:0;width:100%;
-  background:#020c1f;border-top:1px solid #1e293b;
-  display:flex;justify-content:center;gap:10px;padding:10px;z-index:998
-}
-
 #adminPanel{
   display:none;position:fixed;inset:0;
   background:#050b1a;z-index:99999;
@@ -250,13 +244,12 @@ details[open] summary::after{content:"  −"}
 </div>
 
 <!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/918709523430" class="whatsapp-float">🟢</a>
-
+<a href="https://wa.me/918709523430" class="whatsapp-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+       alt="WhatsApp" 
+       style="width:34px;height:34px;">
+</a>
 <!-- STICKY CTA -->
-<div class="sticky-cta">
-  <a href="https://wa.me/918709523430" class="cta-btn">WhatsApp</a>
-  <a href="#contact" class="cta-btn">Get Quote</a>
-</div>
 
 <!-- ADMIN PANEL -->
 <div id="adminPanel">
@@ -386,3 +379,4 @@ startCountdown();
 
 </body>
 </html>
+
