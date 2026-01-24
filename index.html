@@ -2,132 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Void Data Services</title>
+  <title>Void Data Services | Professional Data & Digital Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.png">
+
+  <meta name="description" content="Professional data entry, Excel reporting, web research, and affordable business websites in India. Void Data Services helps businesses scale with accurate digital solutions.">
+
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZ9FYV4NOR"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZY9FYW4NOR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-YZ9FYV4NOR');
+    gtag('config', 'G-ZY9FYW4NOR');
   </script>
 
   <style>
     body {margin:0;font-family:Arial,sans-serif;background:#0a0f1f;color:#fff;}
-    header {text-align:center;padding:50px 15px;background:#020617;}
-    header img {max-width:220px;margin-bottom:12px;}
-    .tagline {color:#38bdf8;font-weight:bold;letter-spacing:1px;}
-    .hero-summary {max-width:900px;margin:20px auto 0;color:#cbd5e1;font-size:16px;line-height:1.8;}
+    header {background:#020617;padding:55px 20px;text-align:center;}
+    header img {max-width:240px;margin-bottom:15px;}
+    .hero-title {font-size:34px;margin-bottom:10px;}
+    .hero-summary {max-width:900px;margin:0 auto 20px;color:#cbd5e1;line-height:1.7;}
 
-    nav a {color:#7dd3fc;margin:0 8px;text-decoration:none;font-size:14px;}
-
-    .section {
-      max-width:1050px;
-      margin:80px auto;
-      padding:0 20px;
-      opacity:0;
-      transform:translateY(40px);
-      transition:all .8s ease;
-    }
-    .section.show {opacity:1;transform:translateY(0);}
-
-    h2 {border-bottom:2px solid #38bdf8;padding-bottom:8px;margin-bottom:30px;}
-
-    .box {
-      background:#020c1f;
-      border-radius:14px;
-      padding:28px;
-      border:1px solid #1e293b;
-      margin-bottom:25px;
-      line-height:1.8;
-      color:#e2e8f0;
+    .cta-btn {
+      display:inline-block;margin:10px;padding:14px 28px;
+      background:#38bdf8;color:#020617;
+      border-radius:30px;text-decoration:none;font-weight:bold;
     }
 
-    /* ACCORDION */
-    details {
-      background:#020c1f;
-      border-radius:12px;
-      margin-bottom:14px;
-      padding:18px 22px;
-      border:1px solid #1e293b;
-    }
-    summary {
-      cursor:pointer;
-      font-weight:600;
-      color:#7dd3fc;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
-    summary::after {content:"+";font-size:22px;}
-    details[open] summary::after {content:"−";}
+    .container {max-width:1100px;margin:auto;padding:50px 20px;}
+    h2 {border-bottom:2px solid #38bdf8;padding-bottom:8px;margin-bottom:25px;}
 
-    /* GRID */
-    .grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:22px;
-    }
-    .card {
-      background:#020c1f;
-      border:1px solid #1e293b;
-      border-radius:14px;
-      padding:22px;
-      line-height:1.7;
+    .trust {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;}
+    .trust-box {background:#020617;padding:18px;border-radius:10px;border:1px solid #1e293b;text-align:center;font-size:14px;}
+
+    .accordion {margin-bottom:14px;border-radius:12px;background:#020617;border:1px solid #1e293b;}
+    .accordion summary {padding:18px 22px;cursor:pointer;font-weight:600;color:#7dd3fc;display:flex;justify-content:space-between;}
+    .accordion summary::after {content:"+";font-size:22px;}
+    .accordion[open] summary::after {content:"−";}
+    .accordion-content {padding:16px 22px 22px;color:#e2e8f0;line-height:1.7;}
+
+    .starter-box {background:#081229;border:2px solid #38bdf8;border-radius:16px;padding:25px;margin-bottom:30px;box-shadow:0 0 25px rgba(56,189,248,0.2);}
+
+    .urgency-box {
+      background: linear-gradient(135deg, #1a0f1f, #081229);
+      border: 2px solid #ff6b6b;
+      border-radius: 18px;
+      padding: 25px;
+      margin: 20px 0 35px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(255,107,107,0.25);
+      animation: pulseGlow 2s infinite;
     }
 
-    /* FORM */
-    input, textarea {
-      width:100%;
-      padding:12px;
-      margin:10px 0;
-      border-radius:6px;
-      border:none;
-      font-size:14px;
-    }
-    button {
-      background:#38bdf8;
-      color:#000;
-      padding:14px 26px;
-      border:none;
-      border-radius:6px;
-      font-weight:bold;
-      cursor:pointer;
-      font-size:14px;
+    .slots-text {font-size:16px;font-weight:bold;color:#ffb3b3;margin-bottom:8px;}
+    .valid-till {font-size:14px;color:#ffd6d6;margin-bottom:12px;}
+    .countdown-text {font-size:15px;color:#ffd6d6;margin-bottom:12px;}
+
+    .countdown-timer {display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+    .countdown-timer div {background:#020617;border:1px solid #ff6b6b;border-radius:10px;padding:10px 14px;min-width:70px;}
+    .countdown-timer span {font-size:22px;font-weight:bold;color:#ff6b6b;display:block;}
+    .countdown-timer small {font-size:11px;color:#ffcfcf;}
+
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 20px rgba(255,107,107,0.2); }
+      50% { box-shadow: 0 0 40px rgba(255,107,107,0.4); }
+      100% { box-shadow: 0 0 20px rgba(255,107,107,0.2); }
     }
 
-    footer {
-      text-align:center;
-      padding:40px;
-      font-size:13px;
-      color:#94a3b8;
-    }
+    .contact {background:#020617;padding:30px;border-radius:12px;border:1px solid #1e293b;}
+    .contact input,.contact textarea {width:100%;padding:12px;margin-bottom:12px;border-radius:8px;border:none;background:#020617;color:#fff;}
+    .contact button {width:100%;padding:14px;border:none;border-radius:30px;background:#38bdf8;color:#020617;font-weight:bold;}
 
-    /* WHATSAPP */
+    footer {text-align:center;padding:30px;font-size:13px;color:#94a3b8;}
+
     .whatsapp-float {
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25D366;
-      border-radius:50%;
-      width:60px;
-      height:60px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
+      position:fixed;bottom:20px;right:20px;
+      background:#25D366;border-radius:50%;
+      width:58px;height:58px;
+      display:flex;align-items:center;justify-content:center;
       box-shadow:0 8px 25px rgba(0,0,0,0.4);
       z-index:999;
-    }
-    .whatsapp-float img {width:32px;height:32px;}
-
-    /* MOBILE */
-    @media(max-width:600px){
-      header img{max-width:180px;}
-      .hero-summary{font-size:14px;}
-      nav a{display:inline-block;margin:6px;}
+      font-size:26px;
+      text-decoration:none;
+      color:#fff;
     }
   </style>
 </head>
@@ -136,177 +95,174 @@
 
 <header>
   <img src="logo.png" alt="Void Data Services">
-  <h1>Void Data Services</h1>
-  <p class="tagline">Accuracy. Reliability. Results.</p>
+  <div class="hero-title">Professional Data & Digital Solutions</div>
+  <div class="hero-summary">
+    Void Data Services helps businesses operate smarter with accurate data processing, professional Excel reporting, web research, and affordable business websites.
+  </div>
 
-  <p class="hero-summary">
-    Accurate Digital Services That Help Your Business Run Better.<br><br>
-    Void Data Services provides reliable data entry, Excel management, web research, and affordable website development for businesses across India. 
-    We focus on accuracy, speed, and long-term client relationships — so you can save time, reduce errors, and grow your business with confidence.
-  </p>
-
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#web">Web</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <a href="#contact" class="cta-btn">Get a Free Quote</a>
+  <a href="https://wa.me/918709523430" class="cta-btn" target="_blank">Chat on WhatsApp</a>
 </header>
 
-<!-- ABOUT -->
-<div class="section" id="about">
-  <h2>About Void Data Services</h2>
-  <div class="box">
-    Void Data Services is a digital services firm focused on delivering high-accuracy data solutions and professional web development for growing businesses. 
-    Founded by <strong>Rahul Kumar</strong>, our mission is to help organizations streamline operations, reduce manual workload, and improve digital efficiency.
-    <br><br>
-    We work with startups, small businesses, and service-based companies to provide dependable data handling, clean reporting systems, and strong online presence — 
-    built on trust, consistency, and long-term partnerships.
+<div class="container">
+
+<h2>🚀 LIMITED-TIME Starter Packages</h2>
+
+<div class="starter-box">
+
+  <div class="urgency-box">
+    <div class="slots-text">
+      🔥 Limited-Time Offer — Only <strong><span id="slot-count">5</span> Starter Slots</strong> Available
+    </div>
+
+    <div class="valid-till">
+      📅 Starter Offers Valid Till <strong><span id="offer-date-text">28 February 2026</span></strong>
+    </div>
+
+    <div class="countdown-text">⏳ Time Remaining:</div>
+
+    <div id="countdown-timer" class="countdown-timer">
+      <div><span id="days">00</span><small>Days</small></div>
+      <div><span id="hours">00</span><small>Hours</small></div>
+      <div><span id="minutes">00</span><small>Minutes</small></div>
+      <div><span id="seconds">00</span><small>Seconds</small></div>
+    </div>
   </div>
+
+  <details class="accordion">
+    <summary>🌐 Starter One-Page Business Website</summary>
+    <div class="accordion-content">
+      <strong>Starter Price:</strong> ₹2,999 – ₹3,999<br>
+      ✔ One-page website<br>
+      ✔ Mobile-friendly<br>
+      ✔ Contact form + WhatsApp<br>
+      ✔ Delivery in 3–5 days
+    </div>
+  </details>
+
 </div>
 
-<!-- DATA SERVICES -->
-<div class="section" id="services">
-  <h2>Data & Business Support Services</h2>
-
-  <details><summary>Data Entry Services</summary>
-    Accurate and secure data entry from PDFs, scanned documents, handwritten forms, and online sources into structured business formats.
-  </details>
-
-  <details><summary>PDF to Excel / Word Conversion</summary>
-    Professional conversion of PDFs into fully editable Excel and Word documents while preserving layout and structure.
-  </details>
-
-  <details><summary>Image to Text Conversion</summary>
-    Extraction of clean, editable data from scanned images, photos, and screenshots for business use.
-  </details>
-
-  <details><summary>Data Cleaning & Formatting</summary>
-    Removal of duplicates, correction of errors, and standardization of data for analysis-ready and professional datasets.
-  </details>
-
-  <details><summary>Excel Data Management</summary>
-    Organization, formulas, reporting structure, and Excel system setup for efficient business tracking.
-  </details>
-
-  <details><summary>Web Research & Data Collection</summary>
-    Targeted online research to collect verified business data including leads, contacts, and market information.
-  </details>
+<h2>Why Businesses Trust Us</h2>
+<div class="trust">
+  <div class="trust-box">🔒 Confidential Data</div>
+  <div class="trust-box">⏱ On-Time Delivery</div>
+  <div class="trust-box">📁 Secure Files</div>
+  <div class="trust-box">🇮🇳 India-Based Support</div>
 </div>
 
-<!-- WEBSITE DEVELOPMENT -->
-<div class="section" id="web">
-  <h2>Website Development Solutions</h2>
+<h2>Contact & Free Consultation</h2>
+<div class="contact" id="contact">
+  <form action="https://formspree.io/f/xnjpwwwv" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Tell us about your project" required></textarea>
+    <button type="submit">Request Free Quote</button>
+  </form>
 
-  <details>
-    <summary>One-Page Business Website</summary>
-    <strong>Investment Range:</strong> ₹3,000 – ₹6,000<br><br>
-    Designed for small businesses and professionals who need a strong online presence quickly.<br>
-    ✔ Custom one-page design<br>
-    ✔ Mobile-friendly layout<br>
-    ✔ Hosting & deployment setup<br>
-    ✔ Basic on-page SEO<br>
-    ✔ 7 days post-launch support
-  </details>
-
-  <details>
-    <summary>Multi-Page Business Website</summary>
-    <strong>Investment Range:</strong> ₹7,000 – ₹15,000+<br><br>
-    Ideal for growing businesses that require multiple service and information pages.<br>
-    ✔ 3–5 professional pages<br>
-    ✔ Premium business design<br>
-    ✔ Contact form integration<br>
-    ✔ Basic SEO structure<br>
-    ✔ 15 days post-launch support
-  </details>
+  <p style="margin-top:15px;">
+    Email: voiddataservices@gmail.com<br>
+    WhatsApp: +91 87095 23430
+  </p>
 </div>
 
-<!-- PORTFOLIO -->
-<div class="section" id="portfolio">
-  <h2>Project Categories & Typical Pricing</h2>
-
-  <details>
-    <summary>Business Websites</summary>
-    One-page websites: ₹3,000 – ₹6,000<br>
-    Multi-page websites: ₹7,000 – ₹15,000+<br>
-    Custom business systems: ₹15,000+
-  </details>
-
-  <details>
-    <summary>Data Entry Projects</summary>
-    PDF/Image to Excel/Word: ₹5 – ₹15 per page<br>
-    Bulk data projects: ₹300 – ₹600 per hour<br>
-    Monthly data contracts: ₹5,000 – ₹20,000+
-  </details>
-
-  <details>
-    <summary>Excel Dashboards & Reports</summary>
-    Basic reports: ₹1,000 – ₹3,000<br>
-    Interactive dashboards: ₹3,000 – ₹8,000<br>
-    Advanced automation: ₹8,000+
-  </details>
-
-  <details>
-    <summary>Web Research Projects</summary>
-    Lead generation: ₹2 – ₹8 per lead<br>
-    Research hourly: ₹300 – ₹700 per hour<br>
-    Monthly research: ₹5,000 – ₹25,000+
-  </details>
-</div>
-
-<!-- TESTIMONIALS -->
-<div class="section">
-  <h2>Client Feedback</h2>
-  <div class="box">⭐ "Consistent accuracy and fast turnaround. Very professional service."</div>
-  <div class="box">⭐ "Clean data delivery and excellent communication throughout."</div>
-  <div class="box">⭐ "Affordable website solution delivered exactly as required."</div>
-</div>
-
-<!-- FAQ -->
-<div class="section">
-  <h2>Frequently Asked Questions</h2>
-  <details><summary>How fast is delivery?</summary>Most small projects are delivered within 24–72 hours depending on scope.</details>
-  <details><summary>Is my business data secure?</summary>Yes, all client data is handled with strict confidentiality.</details>
-  <details><summary>Do you offer ongoing support?</summary>Yes, support is included based on selected service package.</details>
-</div>
-
-<!-- CONTACT -->
-<div class="section" id="contact">
-  <h2>Get in Touch</h2>
-  <div class="box">
-    <form action="https://formspree.io/f/xnjpwwwv" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Tell us about your project" required></textarea>
-      <button type="submit">Request a Quote</button>
-    </form>
-
-    <p><strong>Email:</strong> voiddataservices@gmail.com</p>
-    <p><strong>WhatsApp:</strong> +91 87095 23430</p>
-  </div>
 </div>
 
 <footer>
   © 2026 Void Data Services. All rights reserved.
 </footer>
 
-<!-- WhatsApp Button -->
-<a href="https://wa.me/918709523430" class="whatsapp-float" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
+<a href="https://wa.me/918709523430" class="whatsapp-float" target="_blank">💬</a>
+
+<!-- SECRET ADMIN TRIGGER -->
+<div id="admin-trigger" style="position:fixed;bottom:5px;left:5px;width:25px;height:25px;opacity:0.05;"></div>
+
+<!-- ADMIN MODAL -->
+<div id="admin-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:#020617;border:2px solid #38bdf8;border-radius:16px;padding:25px;width:90%;max-width:400px;">
+    <h3 style="color:#38bdf8;text-align:center;">🔐 Admin Panel</h3>
+
+    <div id="admin-login">
+      <input type="password" id="admin-password" placeholder="Admin Password" style="width:100%;padding:12px;border-radius:8px;border:none;margin-bottom:10px;">
+      <button onclick="checkAdminPassword()" style="width:100%;padding:12px;background:#38bdf8;border:none;border-radius:8px;font-weight:bold;">Login</button>
+      <p id="admin-error" style="color:#ff6b6b;font-size:12px;display:none;text-align:center;">Wrong password</p>
+    </div>
+
+    <div id="admin-controls" style="display:none;">
+      <label>Starter Slots</label>
+      <input type="number" id="admin-slots" style="width:100%;padding:10px;border-radius:8px;border:none;margin-bottom:12px;">
+
+      <label>Offer End Date</label>
+      <input type="date" id="admin-date" style="width:100%;padding:10px;border-radius:8px;border:none;margin-bottom:15px;">
+
+      <button onclick="saveAdminSettings()" style="width:100%;padding:12px;background:#38bdf8;border:none;border-radius:8px;font-weight:bold;">Save</button>
+      <button onclick="closeAdmin()" style="width:100%;padding:10px;border:1px solid #38bdf8;border-radius:8px;background:transparent;color:#38bdf8;margin-top:10px;">Close</button>
+    </div>
+  </div>
+</div>
 
 <script>
-  const sections = document.querySelectorAll('.section');
-  function reveal(){
-    sections.forEach(sec=>{
-      if(sec.getBoundingClientRect().top < window.innerHeight - 120){
-        sec.classList.add('show');
-      }
-    });
+  const ADMIN_PASSWORD = "Voidlord2002";
+
+  let defaultSlots = 5;
+  let defaultEndDate = "2026-02-28";
+
+  let slots = localStorage.getItem("starterSlots") || defaultSlots;
+  let endDate = localStorage.getItem("starterEndDate") || defaultEndDate;
+
+  function updateOfferUI() {
+    document.getElementById("slot-count").innerText = slots;
+    document.getElementById("offer-date-text").innerText =
+      new Date(endDate).toLocaleDateString("en-IN",{day:"numeric",month:"long",year:"numeric"});
   }
-  window.addEventListener('scroll', reveal);
-  reveal();
+
+  updateOfferUI();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = new Date(endDate + "T23:59:59").getTime() - now;
+
+    if (distance < 0) return;
+
+    document.getElementById("days").innerText = Math.floor(distance / (1000*60*60*24));
+    document.getElementById("hours").innerText = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+    document.getElementById("minutes").innerText = Math.floor((distance%(1000*60*60))/(1000*60));
+    document.getElementById("seconds").innerText = Math.floor((distance%(1000*60))/1000);
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown,1000);
+
+  let trigger = document.getElementById("admin-trigger");
+  let pressTimer;
+
+  trigger.addEventListener("touchstart",()=>pressTimer=setTimeout(openAdmin,1200));
+  trigger.addEventListener("mousedown",()=>pressTimer=setTimeout(openAdmin,1200));
+  trigger.addEventListener("touchend",()=>clearTimeout(pressTimer));
+  trigger.addEventListener("mouseup",()=>clearTimeout(pressTimer));
+
+  function openAdmin(){document.getElementById("admin-modal").style.display="flex";}
+  function closeAdmin(){document.getElementById("admin-modal").style.display="none";}
+
+  function checkAdminPassword(){
+    if(document.getElementById("admin-password").value===ADMIN_PASSWORD){
+      document.getElementById("admin-login").style.display="none";
+      document.getElementById("admin-controls").style.display="block";
+      document.getElementById("admin-slots").value=slots;
+      document.getElementById("admin-date").value=endDate;
+    } else {
+      document.getElementById("admin-error").style.display="block";
+    }
+  }
+
+  function saveAdminSettings(){
+    slots=document.getElementById("admin-slots").value;
+    endDate=document.getElementById("admin-date").value;
+    localStorage.setItem("starterSlots",slots);
+    localStorage.setItem("starterEndDate",endDate);
+    updateOfferUI();
+    alert("Starter offer updated!");
+    closeAdmin();
+  }
 </script>
 
 </body>
