@@ -42,36 +42,47 @@
       padding: 30px 20px;
     }
 
-    .services {
-      max-width: 700px;
-      margin: auto;
+    .section {
+      max-width: 800px;
+      margin: 0 auto 40px auto;
       text-align: left;
     }
 
-    .services h2 {
+    .section h2 {
       border-bottom: 2px solid #38bdf8;
       padding-bottom: 5px;
       margin-bottom: 15px;
+      color: #ffffff;
     }
 
-    .services ul {
+    ul {
       list-style: none;
       padding: 0;
     }
 
-    .services li {
-      padding: 8px 0;
+    ul li {
+      padding: 6px 0;
       font-size: 16px;
     }
 
+    .pricing-box {
+      background: #020617;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    .pricing-box h3 {
+      margin-top: 0;
+      color: #38bdf8;
+    }
+
     .contact {
-      margin-top: 40px;
       background: #020617;
       padding: 25px;
       border-radius: 8px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+      max-width: 800px;
+      margin: 0 auto;
       text-align: left;
     }
 
@@ -91,6 +102,92 @@
     }
 
     footer {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #94a3b8;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="logo.png" alt="Void Data Services Logo">
+    <h1>Void Data Services</h1>
+    <p class="tagline">Accurate. Reliable. On Time.</p>
+  </header>
+
+  <div class="container">
+
+    <!-- DATA SERVICES -->
+    <div class="section">
+      <h2>Our Data Services</h2>
+      <ul>
+        <li>✅ Data Entry Services</li>
+        <li>✅ PDF to Excel / Word Conversion</li>
+        <li>✅ Image to Text Data Conversion</li>
+        <li>✅ Data Cleaning & Formatting</li>
+        <li>✅ Excel Data Management</li>
+        <li>✅ Web Research & Data Collection</li>
+      </ul>
+    </div>
+
+    <!-- WEBSITE DEVELOPMENT -->
+    <div class="section">
+      <h2>Website Development Services</h2>
+
+      <div class="pricing-box">
+        <h3>One-Page Website</h3>
+        <p><strong>Starting from ₹3,000</strong></p>
+        <p><strong>Includes:</strong></p>
+        <ul>
+          <li>• 1 page (Home + Services + Contact)</li>
+          <li>• Mobile-friendly design</li>
+          <li>• Basic setup (GitHub/Netlify hosting)</li>
+          <li>• Basic SEO (title + description)</li>
+          <li>• Free basic support for 7 days</li>
+        </ul>
+      </div>
+
+      <div class="pricing-box">
+        <h3>Multi-Page Website (3–5 pages)</h3>
+        <p><strong>Starting from ₹7,000+</strong></p>
+        <p><strong>Includes:</strong></p>
+        <ul>
+          <li>• Home, About, Services, Contact, etc.</li>
+          <li>• Better professional design</li>
+          <li>• Contact form</li>
+          <li>• Basic SEO</li>
+          <li>• Free support for 15 days</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact">
+      <h2>Contact Us</h2>
+      <p><strong>Founder:</strong> Rahul Kumar</p>
+      <p><strong>Email:</strong> 
+        <a href="mailto:voiddataservices@gmail.com">voiddataservices@gmail.com</a>
+      </p>
+      <p><strong>Phone / WhatsApp:</strong> +91 87095 23430</p>
+      <p><strong>Website:</strong> 
+        <a href="https://voiddataservices.github.io/void-data-services/" target="_blank">
+          https://voiddataservices.github.io/void-data-services/
+        </a>
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Void Data Services. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>    footer {
       margin-top: 30px;
       font-size: 13px;
       color: #94a3b8;
@@ -143,3 +240,4 @@
 
 </body>
 </html>
+
