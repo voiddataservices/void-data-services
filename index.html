@@ -23,13 +23,9 @@
     }
 
     header img {
-      max-width: 300px;
+      max-width: 280px;
       height: auto;
       margin-bottom: 10px;
-    }
-
-    h1 {
-      margin: 5px 0;
     }
 
     .tagline {
@@ -43,7 +39,7 @@
     }
 
     .section {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto 40px auto;
       text-align: left;
     }
@@ -51,37 +47,51 @@
     .section h2 {
       border-bottom: 2px solid #38bdf8;
       padding-bottom: 5px;
-      margin-bottom: 15px;
-      color: #ffffff;
+      margin-bottom: 20px;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
+    /* ACCORDION */
+    details {
+      background: #020617;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      padding: 15px;
+      cursor: pointer;
     }
 
-    ul li {
-      padding: 6px 0;
-      font-size: 16px;
+    summary {
+      font-size: 17px;
+      font-weight: bold;
+      color: #38bdf8;
+      outline: none;
     }
 
+    details p {
+      margin-top: 10px;
+      color: #cbd5e1;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* PRICING */
     .pricing-box {
       background: #020617;
       padding: 20px;
-      border-radius: 8px;
-      margin-top: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
 
     .pricing-box h3 {
-      margin-top: 0;
       color: #38bdf8;
+      margin-top: 0;
     }
 
+    /* CONTACT */
     .contact {
       background: #020617;
       padding: 25px;
-      border-radius: 8px;
-      max-width: 800px;
+      border-radius: 10px;
+      max-width: 900px;
       margin: 0 auto;
       text-align: left;
     }
@@ -89,11 +99,6 @@
     .contact h2 {
       text-align: center;
       margin-bottom: 20px;
-    }
-
-    .contact p {
-      margin: 8px 0;
-      font-size: 15px;
     }
 
     .contact a {
@@ -106,6 +111,142 @@
       font-size: 13px;
       color: #94a3b8;
       padding-bottom: 20px;
+    }
+
+    /* WHATSAPP */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="Void Data Services Logo">
+  <h1>Void Data Services</h1>
+  <p class="tagline">Accurate. Reliable. On Time.</p>
+</header>
+
+<div class="container">
+
+  <!-- DATA SERVICES WITH ACCORDION -->
+  <div class="section">
+    <h2>Our Data Services</h2>
+
+    <details>
+      <summary>✅ Data Entry Services</summary>
+      <p>
+        We accurately enter your data from paper, PDF, scanned files, emails, or websites into Excel, Word, Google Sheets, or your system. This includes customer records, invoices, forms, product lists, and more.
+      </p>
+    </details>
+
+    <details>
+      <summary>✅ PDF to Excel / Word Conversion</summary>
+      <p>
+        We convert your PDF files into fully editable Excel or Word formats while maintaining proper structure, formatting, and accuracy. Ideal for reports, bank statements, invoices, and tables.
+      </p>
+    </details>
+
+    <details>
+      <summary>✅ Image to Text Data Conversion</summary>
+      <p>
+        We extract data from scanned images, photos, and screenshots and convert them into clean, editable text, Excel, or Word files with proper formatting and verification.
+      </p>
+    </details>
+
+    <details>
+      <summary>✅ Data Cleaning & Formatting</summary>
+      <p>
+        We remove duplicates, fix errors, standardize formats, correct spelling, organize columns, and make your data clean, structured, and ready for analysis or business use.
+      </p>
+    </details>
+
+    <details>
+      <summary>✅ Excel Data Management</summary>
+      <p>
+        We organize, sort, filter, and manage large Excel files. This includes creating structured sheets, applying formulas, formatting, and making your data easy to understand and use.
+      </p>
+    </details>
+
+    <details>
+      <summary>✅ Web Research & Data Collection</summary>
+      <p>
+        We research websites and online sources to collect business data such as company details, emails, phone numbers, product info, pricing, and more — delivered in Excel or Google Sheets.
+      </p>
+    </details>
+
+  </div>
+
+  <!-- WEBSITE DEVELOPMENT -->
+  <div class="section">
+    <h2>Website Development Services</h2>
+
+    <div class="pricing-box">
+      <h3>One-Page Website</h3>
+      <p><strong>Starting from ₹3,000</strong></p>
+      <ul>
+        <li>✔ Home + Services + Contact</li>
+        <li>✔ Mobile-friendly design</li>
+        <li>✔ GitHub/Netlify hosting setup</li>
+        <li>✔ Basic SEO (title + description)</li>
+        <li>✔ Free support for 7 days</li>
+      </ul>
+    </div>
+
+    <div class="pricing-box">
+      <h3>Multi-Page Website (3–5 pages)</h3>
+      <p><strong>Starting from ₹7,000+</strong></p>
+      <ul>
+        <li>✔ Home, About, Services, Contact, etc.</li>
+        <li>✔ Professional design</li>
+        <li>✔ Contact form</li>
+        <li>✔ Basic SEO</li>
+        <li>✔ Free support for 15 days</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Founder:</strong> Rahul Kumar</p>
+    <p><strong>Email:</strong> 
+      <a href="mailto:voiddataservices@gmail.com">voiddataservices@gmail.com</a>
+    </p>
+    <p><strong>Phone / WhatsApp:</strong> +91 87095 23430</p>
+    <p><strong>Website:</strong> 
+      <a href="https://voiddataservices.github.io/void-data-services/" target="_blank">
+        https://voiddataservices.github.io/void-data-services/
+      </a>
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Void Data Services. All rights reserved.</p>
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/918709523430" class="whatsapp-float" target="_blank">💬</a>
+
+</body>
+</html>      padding-bottom: 20px;
     }
   </style>
 </head>
@@ -188,3 +329,4 @@
 
 </body>
 </html>
+
