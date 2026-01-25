@@ -18,25 +18,17 @@ h1,h2,h3{color:#7dd3fc}
 .fade{opacity:0;transform:translateY(20px);transition:.7s}
 .fade.show{opacity:1;transform:none}
 
-/* ACCORDION FIX: + - ON RIGHT */
+/* Accordion + - Right */
 details{margin-bottom:12px}
 summary{
-  cursor:pointer;
-  font-weight:bold;
-  color:#7dd3fc;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  cursor:pointer;font-weight:bold;color:#7dd3fc;
+  display:flex;justify-content:space-between;align-items:center
 }
-summary::after{
-  content:"+";
-  font-size:22px;
-  margin-left:auto;
-}
+summary::after{content:"+";font-size:22px}
 details[open] summary::after{content:"−"}
 
 .offer{border:2px solid #38bdf8;box-shadow:0 0 25px rgba(56,189,248,.3)}
-.countdown{color:#38bdf8;font-weight:bold}
+.countdown{color:#38bdf8;font-weight:bold;font-size:18px;margin-bottom:8px}
 
 .founder{display:flex;flex-wrap:wrap;gap:25px;align-items:center}
 .founder img{width:180px;height:180px;border-radius:50%;object-fit:cover;border:3px solid #38bdf8}
@@ -49,7 +41,7 @@ details[open] summary::after{content:"−"}
   background:#25D366;color:#fff;
   width:60px;height:60px;border-radius:50%;
   display:flex;align-items:center;justify-content:center;
-  font-size:28px;text-decoration:none;z-index:999
+  z-index:999
 }
 
 #adminPanel{
@@ -57,8 +49,13 @@ details[open] summary::after{content:"−"}
   background:#050b1a;z-index:99999;
   padding:20px;overflow:auto
 }
-#adminPanel input,#adminPanel textarea{width:100%;padding:10px;margin:6px 0 12px;border-radius:8px;border:none}
-#adminPanel button{padding:12px;border:none;border-radius:8px;background:#38bdf8;color:#000;font-weight:bold;width:100%}
+#adminPanel input,#adminPanel select{
+  width:100%;padding:10px;margin:6px 0 12px;border-radius:8px;border:none
+}
+#adminPanel button{
+  padding:12px;border:none;border-radius:8px;
+  background:#38bdf8;color:#000;font-weight:bold;width:100%;margin-bottom:8px
+}
 </style>
 </head>
 
@@ -66,17 +63,17 @@ details[open] summary::after{content:"−"}
 
 <!-- HERO -->
 <div class="hero fade">
-  <img src="logo.png" alt="Void Data Services">
+  <img src="logo.png" alt="Void Data Services" id="adminTrigger">
   <h1 id="heroHeadline">Reliable Digital Services for Growing Businesses</h1>
-  <p>Data entry, Excel, web research & affordable websites — delivered accurately and on time.</p>
+  <p>Accurate data, smart reports, and affordable websites — delivered on time.</p>
   <a href="#contact" class="cta-btn">Get Free Quote</a>
   <a href="https://wa.me/918709523430" class="cta-btn">WhatsApp Now</a>
 </div>
 
 <div class="container">
 
-<!-- COMMITMENTS -->
-<div class="box fade" id="commitmentText">
+<!-- COMMITMENT -->
+<div class="box fade">
   <h2>Our Commitment</h2>
   <ul>
     <li>✔ On-time delivery</li>
@@ -90,132 +87,71 @@ details[open] summary::after{content:"−"}
 <!-- STARTER OFFER -->
 <div class="box offer fade" id="starterOfferBox">
 
-  <!-- TIMER HEADER -->
-  <div style="text-align:center;margin-bottom:15px">
-    <div style="font-size:26px">⏰ Deal Ends In</div>
-    <div class="countdown" id="countdownTimer"></div>
-  </div>
+  <div class="countdown" id="countdownTimer">⏰ Loading timer...</div>
+
+  <p style="color:#7dd3fc;font-weight:bold">
+    🎯 Limited Slots Available: <span id="slotsLeft">10</span> left
+  </p>
 
   <h2>🔥 Limited-Time Starter Offer</h2>
   <p>Valid till: <strong id="starterOfferDate">28 Feb 2026</strong></p>
 
-  <p>
-    Perfect for new clients who want to test our quality before starting long-term projects.
-    Get professional services at special introductory pricing.
-  </p>
+  <p>Perfect for new clients to test our quality before starting long-term projects.</p>
 
   <ul>
-    <li>
-      ✔ Data Entry (up to 100 records/pages)  
-      <br><small>Regular: ₹1,200 → <strong>Starter: ₹699</strong></small>
-    </li>
-    <li>
-      ✔ Excel Report / Basic Dashboard  
-      <br><small>Regular: ₹2,000 → <strong>Starter: ₹999</strong></small>
-    </li>
-    <li>
-      ✔ Web Research (up to 50 verified leads)  
-      <br><small>Regular: ₹750 → <strong>Starter: ₹399</strong></small>
-    </li>
-    <li>
-      ✔ One-Page Business Website  
-      <br><small>Regular: ₹5,000 → <strong>Starter: ₹2,499</strong></small>
-    </li>
+    <li>✔ Data Entry (100 records/pages) — <small>Regular ₹1,200 → <strong>Starter ₹699</strong></small></li>
+    <li>✔ Excel Report / Basic Dashboard — <small>Regular ₹2,000 → <strong>Starter ₹999</strong></small></li>
+    <li>✔ Web Research (50 verified leads) — <small>Regular ₹750 → <strong>Starter ₹399</strong></small></li>
+    <li>✔ One-Page Business Website — <small>Regular ₹5,000 → <strong>Starter ₹2,499</strong></small></li>
   </ul>
 
-  <h3>
-    Total Starter Bundle Value: <s>₹8,950</s><br>
-    <span style="color:#38bdf8">Starter Offer Price: <span id="starterOfferPrice">₹2,999</span></span>
-  </h3>
-  <p style="color:#7dd3fc;font-weight:bold">
-  🎯 Limited Slots Available: 
-  <span id="slotsLeft">10</span> left
-  </p>
+  <h3>Total Starter Price: <span id="starterOfferPrice">₹2,999</span></h3>
 
-
-  <a href="https://wa.me/918709523430" class="cta-btn">
-    Claim Starter Offer on WhatsApp
-  </a>
+  <a href="https://wa.me/918709523430" class="cta-btn">Claim Offer on WhatsApp</a>
 </div>
 
-<!-- CORE SERVICES (EXPANDED + PROFESSIONAL) -->
+<!-- CORE SERVICES -->
 <div class="box fade">
   <h2>Our Core Services</h2>
 
   <details>
-    <summary>🌐 Business Website Development</summary>
-    <p>
-      We design and develop professional business websites that help you build trust,
-      attract customers, and generate real inquiries. Our websites are optimized for
-      mobile, speed, and basic SEO so your business looks credible online.
-    </p>
+    <summary>🌐 Business Websites</summary>
+    <p>We build professional business websites to generate leads and build trust.</p>
     <ul>
-      <li>✔ One-page & multi-page business websites</li>
-      <li>✔ Mobile & tablet responsive design</li>
-      <li>✔ Lead-focused layout (WhatsApp + contact forms)</li>
-      <li>✔ Basic SEO setup (titles, meta, structure)</li>
-      <li>✔ Fast-loading & clean design</li>
+      <li>Time: 2–7 days</li>
+      <li>Includes mobile design, basic SEO, WhatsApp & contact forms</li>
     </ul>
-    <p><strong>Typical Delivery Time:</strong> 3 – 7 working days</p>
-    <p><strong>Use Case:</strong> Small businesses, service providers, personal business websites</p>
-    <p><strong>Price:</strong> <span id="priceWebsites">₹5,000 – ₹18,000+</span></p>
+    <p><strong>Price:</strong> <span id="priceWebsites">₹3,000 – ₹12,000+</span></p>
   </details>
 
   <details>
-    <summary>📝 Data Entry & Data Processing</summary>
-    <p>
-      We provide high-accuracy data entry and data processing services from PDFs,
-      scanned documents, handwritten forms, and images into Excel, Word, or business systems.
-      Every project goes through basic quality checks to reduce errors.
-    </p>
+    <summary>📝 Data Entry Projects</summary>
+    <p>High-accuracy data entry from PDFs, images & documents.</p>
     <ul>
-      <li>✔ PDF/Image to Excel or Word</li>
-      <li>✔ Bulk data typing projects</li>
-      <li>✔ CRM & system data updates</li>
-      <li>✔ Data cleaning & formatting</li>
-      <li>✔ Basic validation & consistency checks</li>
+      <li>Time: Depends on volume (same-day to multi-day)</li>
+      <li>Includes quality checks & formatting</li>
     </ul>
-    <p><strong>Typical Delivery Time:</strong> Same day – 3 days (depending on volume)</p>
-    <p><strong>Use Case:</strong> Back-office support, admin work, document digitization</p>
-    <p><strong>Price:</strong> <span id="priceDataEntry">₹8 – ₹25 per page / ₹350 – ₹700 per hour</span></p>
+    <p><strong>Price:</strong> <span id="priceDataEntry">₹5 – ₹15 per page</span></p>
   </details>
 
   <details>
-    <summary>📊 Excel Dashboards & Business Reports</summary>
-    <p>
-      We build structured Excel reports and dashboards to help you track sales,
-      expenses, performance, and key business metrics. This helps you understand
-      your numbers and make better business decisions.
-    </p>
+    <summary>📊 Excel Dashboards & Reports</summary>
+    <p>Excel dashboards for sales, expenses, KPIs & business tracking.</p>
     <ul>
-      <li>✔ Sales & revenue tracking</li>
-      <li>✔ Expense & budget reports</li>
-      <li>✔ KPI dashboards</li>
-      <li>✔ Automated summary sheets</li>
-      <li>✔ Clean & professional formatting</li>
+      <li>Time: 1–3 days</li>
+      <li>Automated & easy-to-use reports</li>
     </ul>
-    <p><strong>Typical Delivery Time:</strong> 1 – 4 working days</p>
-    <p><strong>Use Case:</strong> Small business owners, managers, finance tracking</p>
-    <p><strong>Price:</strong> <span id="priceExcel">₹2,000 – ₹12,000+</span></p>
+    <p><strong>Price:</strong> <span id="priceExcel">₹1,000 – ₹8,000+</span></p>
   </details>
 
   <details>
-    <summary>🔍 Web Research & Lead Generation</summary>
-    <p>
-      We provide verified web research and lead generation services including
-      company research, email research, market research, and product research.
-      Data is delivered in clean Excel format for easy outreach and analysis.
-    </p>
+    <summary>🔍 Web Research Projects</summary>
+    <p>Verified lead generation & business research.</p>
     <ul>
-      <li>✔ B2B & B2C lead generation</li>
-      <li>✔ Company & decision-maker research</li>
-      <li>✔ Email & contact data collection</li>
-      <li>✔ Market & competitor research</li>
-      <li>✔ Data verification</li>
+      <li>Time: 1–5 days</li>
+      <li>Clean Excel delivery</li>
     </ul>
-    <p><strong>Typical Delivery Time:</strong> 1 – 3 working days</p>
-    <p><strong>Use Case:</strong> Sales teams, marketing campaigns, outreach projects</p>
-    <p><strong>Price:</strong> <span id="priceResearch">₹4 – ₹15 per verified lead</span></p>
+    <p><strong>Price:</strong> <span id="priceResearch">₹2 – ₹8 per lead</span></p>
   </details>
 </div>
 
@@ -234,7 +170,7 @@ details[open] summary::after{content:"−"}
     <img src="Founder.jpg" alt="Rahul Kumar Founder">
     <div>
       <h3>Rahul Kumar — Founder & Operations Lead</h3>
-      <p>Founder of Void Data Services, focused on accuracy, confidentiality, and long-term client relationships.</p>
+      <p>Focused on accuracy, confidentiality & long-term partnerships.</p>
       <p><strong>Email:</strong> voiddataservices@gmail.com</p>
       <p><strong>WhatsApp:</strong> +918709523430</p>
     </div>
@@ -258,19 +194,82 @@ details[open] summary::after{content:"−"}
 <a href="https://wa.me/918709523430" class="whatsapp-float">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width:34px;height:34px;">
 </a>
+
+<!-- ADMIN PANEL -->
+<div id="adminPanel">
+  <h2>🔐 Admin Panel</h2>
+
+  <input type="password" id="adminPass" placeholder="Admin Password">
+  <button onclick="adminLogin()">Login</button>
+
+  <div id="adminControls" style="display:none">
+
+    <label>Hero Headline</label>
+    <input id="adminHero">
+
+    <label>Starter Total Price</label>
+    <input id="adminOfferPrice">
+
+    <label>Offer End Date & Time</label>
+    <input id="adminOfferDate" type="datetime-local">
+
+    <label>Available Slots</label>
+    <input id="adminSlots" type="number">
+
+    <label>Show / Hide Offer</label>
+    <select id="adminShowOffer">
+      <option value="show">Show</option>
+      <option value="hide">Hide</option>
+    </select>
+
+    <button onclick="saveAdmin()">Save Changes</button>
+    <button onclick="closeAdmin()">Close Panel</button>
+  </div>
+</div>
+
 <script>
-/* ================= ADMIN SAVE ================= */
+/* Fade in */
+document.querySelectorAll('.fade').forEach(el=>el.classList.add('show'));
+
+/* Testimonials */
+let ti=0;
+const tests=document.querySelectorAll('.testimonial');
+setInterval(()=>{
+  tests[ti].classList.remove('active');
+  ti=(ti+1)%tests.length;
+  tests[ti].classList.add('active');
+},4000);
+
+/* Secret Admin (5 clicks on logo) */
+let taps=0;
+adminTrigger.addEventListener('click',()=>{
+  taps++;
+  if(taps>=5){
+    document.getElementById("adminPanel").style.display="block";
+    taps=0;
+  }
+  setTimeout(()=>taps=0,1500);
+});
+
+/* ADMIN */
+const ADMIN_PASSWORD="Voidlord2002";
+
+function adminLogin(){
+  if(adminPass.value===ADMIN_PASSWORD){
+    adminControls.style.display="block";
+    loadAdmin();
+  } else alert("Wrong password");
+}
+
 function saveAdmin(){
   localStorage.setItem("heroText", adminHero.value);
   localStorage.setItem("starterPrice", adminOfferPrice.value);
   localStorage.setItem("offerDateTime", adminOfferDate.value);
   localStorage.setItem("slotsLeft", adminSlots.value);
   localStorage.setItem("showOffer", adminShowOffer.value);
-
   alert("Admin settings saved. Refresh page.");
 }
 
-/* ================= LOAD ADMIN FORM ================= */
 function loadAdmin(){
   adminHero.value = localStorage.getItem("heroText") || "";
   adminOfferPrice.value = localStorage.getItem("starterPrice") || "";
@@ -279,69 +278,36 @@ function loadAdmin(){
   adminShowOffer.value = localStorage.getItem("showOffer") || "show";
 }
 
-/* ================= CLOSE ADMIN ================= */
 function closeAdmin(){
-  document.getElementById("adminPanel").style.display = "none";
+  adminPanel.style.display="none";
 }
 
-/* ================= APPLY SETTINGS ON LOAD ================= */
-document.addEventListener("DOMContentLoaded", () => {
+/* APPLY SETTINGS */
+document.addEventListener("DOMContentLoaded",()=>{
+  if(localStorage.getItem("heroText")) heroHeadline.innerText = localStorage.getItem("heroText");
+  if(localStorage.getItem("starterPrice")) starterOfferPrice.innerText = "₹"+localStorage.getItem("starterPrice");
+  if(localStorage.getItem("slotsLeft")) slotsLeft.innerText = localStorage.getItem("slotsLeft");
+  if(localStorage.getItem("showOffer")==="hide") starterOfferBox.style.display="none";
 
-  // Hero text
-  if(localStorage.getItem("heroText")){
-    heroHeadline.innerText = localStorage.getItem("heroText");
-  }
-
-  // Starter price
-  if(localStorage.getItem("starterPrice")){
-    starterOfferPrice.innerText = "₹" + localStorage.getItem("starterPrice");
-  }
-
-  // Slots left
-  if(localStorage.getItem("slotsLeft")){
-    slotsLeft.innerText = localStorage.getItem("slotsLeft");
-  }
-
-  // Show / Hide Offer
-  if(localStorage.getItem("showOffer") === "hide"){
-    document.getElementById("starterOfferBox").style.display = "none";
-  }
-
-  // Countdown start
-  const savedDateTime = localStorage.getItem("offerDateTime") || "2026-02-28T23:59:59";
-  startCountdownAdmin(savedDateTime);
+  const dt = localStorage.getItem("offerDateTime") || "2026-02-28T23:59";
+  startCountdownAdmin(dt);
 });
 
-/* ================= ADMIN COUNTDOWN ================= */
+/* COUNTDOWN */
 function startCountdownAdmin(endDateTime){
   const end = new Date(endDateTime).getTime();
-
-  setInterval(() => {
-    const now = new Date().getTime();
-    const diff = end - now;
-
-    if(diff <= 0){
-      document.getElementById("countdownTimer").innerText = "Offer Expired";
-      return;
-    }
-
-    const d = Math.floor(diff / (1000*60*60*24));
-    const h = Math.floor((diff / (1000*60*60)) % 24);
-    const m = Math.floor((diff / (1000*60)) % 60);
-    const s = Math.floor((diff / 1000) % 60);
-
-    document.getElementById("countdownTimer").innerText =
-      `⏰ ${d}d ${h}h ${m}m ${s}s`;
-  }, 1000);
+  setInterval(()=>{
+    const now = Date.now();
+    const diff = end-now;
+    if(diff<=0){countdownTimer.innerText="Offer Expired";return;}
+    const d=Math.floor(diff/(1000*60*60*24));
+    const h=Math.floor((diff/(1000*60*60))%24);
+    const m=Math.floor((diff/(1000*60))%60);
+    const s=Math.floor((diff/1000)%60);
+    countdownTimer.innerText = `⏰ ${d}d ${h}h ${m}m ${s}s`;
+  },1000);
 }
 </script>
 
-  </script>
 </body>
 </html>
-
-
-
-
-
-
