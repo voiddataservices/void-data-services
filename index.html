@@ -88,7 +88,14 @@ details[open] summary::after{content:"−"}
 </div>
 
 <!-- STARTER OFFER -->
-<div class="box offer fade">
+<div class="box offer fade" id="starterOfferBox">
+
+  <!-- TIMER HEADER -->
+  <div style="text-align:center;margin-bottom:15px">
+    <div style="font-size:26px">⏰ Deal Ends In</div>
+    <div class="countdown" id="countdownTimer"></div>
+  </div>
+
   <h2>🔥 Limited-Time Starter Offer</h2>
   <p>Valid till: <strong id="starterOfferDate">28 Feb 2026</strong></p>
 
@@ -120,8 +127,11 @@ details[open] summary::after{content:"−"}
     Total Starter Bundle Value: <s>₹8,950</s><br>
     <span style="color:#38bdf8">Starter Offer Price: <span id="starterOfferPrice">₹2,999</span></span>
   </h3>
+  <p style="color:#7dd3fc;font-weight:bold">
+  🎯 Limited Slots Available: 
+  <span id="slotsLeft">10</span> left
+  </p>
 
-  <div class="countdown" id="countdownTimer"></div>
 
   <a href="https://wa.me/918709523430" class="cta-btn">
     Claim Starter Offer on WhatsApp
@@ -289,9 +299,140 @@ function startCountdown(){
 }
 startCountdown();
   </script>
-  
+  <!-- ================= NEW ADMIN PANEL ================= -->
+<div id="adminPanel" style="display:none;position:fixed;inset:0;background:#050b1a;z-index:99999;padding:20px;overflow:auto">
+
+  <h2>🔐 Void Admin Panel</h2>
+
+  <div id="adminLoginBox">
+    <input type="password" id="adminPassword" placeholder="Enter Admin Password">
+    <button onclick="adminLogin()">Login</button>
+  </div>
+
+  <div id="adminControlsBox" style="display:none">
+
+    <label>Show Limited-Time Offer (yes / no)</label>
+    <input id="adminShowOffer" placeholder="yes or no">
+
+    <label>Show Countdown Timer (yes / no)</label>
+    <input id="adminShowTimer" placeholder="yes or no">
+
+    <label>Starter Pack Price (₹)</label>
+    <input id="adminStarterPrice" placeholder="2999">
+
+    <label>Offer End Date & Time</label>
+    <input id="adminOfferDateTime" type="datetime-local">
+
+    <label>Number of Slots Available</label>
+    <input id="adminSlots" placeholder="10">
+
+    <button onclick="saveAdminSettings()">Save Settings</button>
+    <button onclick="closeAdmin()">Close Admin</button>
+
+  </div>
+</div>
+  <script>
+/* ================= ADMIN SYSTEM ================= */
+const ADMIN_PASSWORD = "Voidlord2002";
+
+/* Secret trigger: click logo 5 times */
+let adminTapCount = 0;
+document.querySelector(".hero img").addEventListener("click", () => {
+  adminTapCount++;
+  if(adminTapCount >= 5){
+    document.getElementById("adminPanel").style.display = "block";
+    adminTapCount = 0;
+  }
+  setTimeout(()=>adminTapCount=0,1500);
+});
+
+function adminLogin(){
+  if(document.getElementById("adminPassword").value === ADMIN_PASSWORD){
+    document.getElementById("adminLoginBox").style.display = "none";
+    document.getElementById("adminControlsBox").style.display = "block";
+    loadAdminSettings();
+  } else {
+    alert("Wrong password");
+  }
+}
+
+function saveAdminSettings(){
+  localStorage.setItem("showOffer", adminShowOffer.value.toLowerCase());
+  localStorage.setItem("showTimer", adminShowTimer.value.toLowerCase());
+  localStorage.setItem("starterPrice", adminStarterPrice.value);
+  localStorage.setItem("offerDateTime", adminOfferDateTime.value);
+  localStorage.setItem("slotsLeft", adminSlots.value);
+
+  alert("Admin settings saved! Refresh page.");
+}
+
+function loadAdminSettings(){
+  adminShowOffer.value = localStorage.getItem("showOffer") || "yes";
+  adminShowTimer.value = localStorage.getItem("showTimer") || "yes";
+  adminStarterPrice.value = localStorage.getItem("starterPrice") || "";
+  adminOfferDateTime.value = localStorage.getItem("offerDateTime") || "";
+  adminSlots.value = localStorage.getItem("slotsLeft") || "";
+}
+
+function closeAdmin(){
+  document.getElementById("adminPanel").style.display = "none";
+}
+
+/* ================= APPLY SETTINGS ON LOAD ================= */
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Offer show/hide
+  if(localStorage.getItem("showOffer") === "no"){
+    document.getElementById("starterOfferBox").style.display = "none";
+  }
+
+  // Timer show/hide
+  if(localStorage.getItem("showTimer") === "no"){
+    document.getElementById("countdownTimer").style.display = "none";
+  }
+
+  // Starter price
+  if(localStorage.getItem("starterPrice")){
+    document.getElementById("starterOfferPrice").innerText =
+      "₹" + localStorage.getItem("starterPrice");
+  }
+
+  // Slots left
+  if(localStorage.getItem("slotsLeft")){
+    document.getElementById("slotsLeft").innerText =
+      localStorage.getItem("slotsLeft");
+  }
+
+  // Countdown with admin-controlled time
+  const savedDateTime = localStorage.getItem("offerDateTime") || "2026-02-28T23:59";
+  startCountdownAdmin(savedDateTime);
+});
+
+/* ================= ADMIN COUNTDOWN ================= */
+function startCountdownAdmin(endDateTime){
+  const end = new Date(endDateTime).getTime();
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = end - now;
+
+    if(diff <= 0){
+      document.getElementById("countdownTimer").innerText = "Offer Expired";
+      return;
+    }
+
+    const d = Math.floor(diff/(1000*60*60*24));
+    const h = Math.floor((diff/(1000*60*60))%24);
+    const m = Math.floor((diff/(1000*60))%60);
+    const s = Math.floor((diff/1000)%60);
+
+    document.getElementById("countdownTimer").innerText =
+      `${d}d ${h}h ${m}m ${s}s`;
+  }, 1000);
+}
+  </script>
 </body>
 </html>
+
 
 
 
