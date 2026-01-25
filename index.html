@@ -7,167 +7,178 @@
 
 <style>
 body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#050b1a;
-  color:#fff;
-  overflow-x:hidden;
+  margin:0;font-family:Arial,sans-serif;
+  background:#050b1a;color:#fff;overflow-x:hidden
 }
 h1,h2,h3{color:#7dd3fc}
 
 /* HERO */
 .hero{
-  text-align:center;
-  padding:90px 20px;
-  background:radial-gradient(circle at top, rgba(56,189,248,.2), transparent 60%);
+  text-align:center;padding:90px 20px;
+  background:radial-gradient(circle at top, rgba(56,189,248,.25), transparent 55%),
+             linear-gradient(180deg,#020617,#050b1a);
+  border-bottom:1px solid rgba(56,189,248,.2)
 }
-.hero img{
-  max-width:280px;
-  margin-bottom:20px;
-  filter:drop-shadow(0 0 40px rgba(56,189,248,.7));
+.hero img{max-width:260px;filter:drop-shadow(0 0 35px rgba(56,189,248,.7))}
+.hero h1{
+  font-size:42px;
+  background:linear-gradient(90deg,#e0f2fe,#7dd3fc,#22d3ee);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent
 }
+.hero p{color:#cbd5f5;font-size:18px;max-width:720px;margin:10px auto 25px}
+
 .cta-btn{
   background:linear-gradient(135deg,#38bdf8,#22d3ee);
-  color:#001018;
-  padding:14px 32px;
-  border-radius:14px;
-  font-weight:900;
-  margin:8px;
-  display:inline-block;
-  text-decoration:none;
-  box-shadow:0 15px 40px rgba(56,189,248,.6);
+  color:#001018;padding:14px 34px;border-radius:14px;
+  text-decoration:none;font-weight:900;margin:8px;display:inline-block;
+  box-shadow:0 12px 35px rgba(56,189,248,.5);
+  transition:.3s
 }
+.cta-btn:hover{transform:translateY(-4px) scale(1.05)}
 
-.container{max-width:1100px;margin:auto;padding:40px 20px}
+.container{max-width:1100px;margin:auto;padding:60px 20px}
+
 .box{
   background:linear-gradient(180deg, rgba(2,6,23,.95), rgba(2,6,23,.75));
   border:1px solid rgba(56,189,248,.25);
-  border-radius:22px;
-  padding:32px;
-  margin-bottom:45px;
-  box-shadow:0 20px 70px rgba(0,0,0,.6);
+  border-radius:22px;padding:36px;margin-bottom:55px;
+  box-shadow:0 25px 80px rgba(0,0,0,.65)
 }
 
-/* ===== CORE SERVICES GRID ===== */
+/* ===== STARTER OFFER ===== */
+.offer{border:2px solid #38bdf8;box-shadow:0 0 50px rgba(56,189,248,.45)}
+.countdown{color:#38bdf8;font-weight:bold;margin-bottom:10px}
+
+/* ===== SERVICES GRID ===== */
 .services-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:18px;margin-top:20px
 }
-@media(min-width:700px){
-  .services-grid{grid-template-columns:repeat(4,1fr)}
-}
-
 .service-card{
   position:relative;
   background:linear-gradient(180deg,#020617,#020617);
-  border:2px solid rgba(56,189,248,.4);
-  border-radius:18px;
-  padding:18px 12px;
-  text-align:center;
+  border:2px solid rgba(56,189,248,.35);
+  border-radius:20px;padding:22px 16px;text-align:center;
   cursor:pointer;
+  box-shadow:0 0 25px rgba(56,189,248,.15);
   transition:.3s;
-  box-shadow:0 0 0 rgba(56,189,248,0);
+  overflow:hidden;
 }
 .service-card:hover{
-  transform:translateY(-6px) scale(1.04);
-  box-shadow:0 0 35px rgba(56,189,248,.6);
-  border-color:#38bdf8;
+  transform:translateY(-6px) scale(1.03);
+  box-shadow:0 0 45px rgba(56,189,248,.45)
 }
-
-.service-icon{font-size:36px;margin-bottom:6px}
+.service-icon{font-size:38px;margin-bottom:8px}
 .service-title{font-weight:900;font-size:15px}
-.service-sub{font-size:12px;color:#9ac6e8}
+.service-sub{font-size:12px;color:#9aa4c7}
 
-.popular-badge{
-  position:absolute;
-  top:8px;
-  right:8px;
-  background:linear-gradient(135deg,#38bdf8,#22d3ee);
-  color:#001018;
-  font-size:10px;
-  font-weight:900;
-  padding:5px 10px;
-  border-radius:999px;
-  box-shadow:0 0 18px rgba(56,189,248,.9);
+/* MOST POPULAR */
+.popular{
+  position:absolute;top:8px;right:8px;
+  background:linear-gradient(135deg,#fde047,#facc15);
+  color:#000;font-size:10px;font-weight:900;
+  padding:4px 8px;border-radius:999px;
+  box-shadow:0 0 12px rgba(250,204,21,.8)
 }
 
-/* INLINE EXPAND */
-.service-expand{
-  grid-column:1/-1;
-  background:linear-gradient(180deg,#020617,#020617);
-  border:1px solid rgba(56,189,248,.35);
-  border-radius:18px;
-  padding:22px;
-  margin-top:6px;
-  display:none;
-  animation:expand .35s ease;
+/* RIPPLE */
+.ripple{
+  position:absolute;border-radius:50%;
+  background:rgba(125,211,252,.5);
+  transform:scale(0);animation:ripple .6s linear;
 }
-@keyframes expand{
-  from{opacity:0;transform:translateY(-10px)}
-  to{opacity:1;transform:none}
-}
+@keyframes ripple{to{transform:scale(4);opacity:0}}
 
+/* ===== APP STYLE EXPAND PANEL ===== */
+.sheet-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.5);
+  display:none;z-index:9998
+}
+.sheet{
+  position:fixed;left:0;right:0;bottom:-100%;
+  background:linear-gradient(180deg,#020617,#050b1a);
+  border-radius:26px 26px 0 0;
+  padding:26px;max-height:85vh;overflow:auto;
+  transition:.45s ease;
+  z-index:9999;
+  box-shadow:0 -25px 60px rgba(0,0,0,.8)
+}
+.sheet.open{bottom:0}
+.sheet-close{position:absolute;top:12px;right:16px;font-size:22px;cursor:pointer}
+
+/* SAVE BADGE */
 .save-badge{
-  display:inline-block;
-  background:linear-gradient(135deg,#22d3ee,#38bdf8);
-  color:#001018;
-  font-size:11px;
-  font-weight:900;
-  padding:4px 10px;
-  border-radius:999px;
-  box-shadow:0 0 15px rgba(56,189,248,.8);
-  margin-bottom:8px;
+  display:inline-block;background:#16a34a;color:#fff;
+  padding:6px 14px;border-radius:999px;
+  font-size:12px;font-weight:900;margin:10px 0;
+  box-shadow:0 0 18px rgba(22,163,74,.6)
 }
 
+/* PORTFOLIO IMAGE */
 .portfolio-img{
-  width:100%;
-  border-radius:12px;
-  margin-top:10px;
-  border:1px solid rgba(56,189,248,.3);
+  width:100%;border-radius:14px;margin:12px 0;
+  border:1px solid rgba(56,189,248,.3)
 }
 
 /* PROCESS */
 .process-step{
   background:rgba(56,189,248,.08);
   border:1px solid rgba(56,189,248,.25);
-  border-radius:14px;
-  padding:14px;
-  margin:10px 0;
-  font-weight:bold;
-}
-
-/* FOUNDER */
-.founder{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
-.founder img{
-  width:160px;height:160px;border-radius:50%;
-  border:3px solid #38bdf8;
-  object-fit:cover;
+  border-radius:14px;padding:16px;margin:12px 0;
+  font-weight:bold
 }
 
 /* WHATSAPP */
 .whatsapp-float{
   position:fixed;right:20px;bottom:90px;
-  background:#25D366;width:60px;height:60px;
-  border-radius:50%;display:flex;align-items:center;justify-content:center;
-  box-shadow:0 10px 30px rgba(0,0,0,.6);
-  z-index:999;
+  background:#25D366;width:60px;height:60px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  z-index:999;box-shadow:0 10px 30px rgba(0,0,0,.6)
+}
+
+/* ADMIN PANEL */
+#adminPanel{
+  display:none;position:fixed;inset:0;
+  background:#050b1a;z-index:10000;padding:20px;overflow:auto
+}
+#adminPanel input,#adminPanel select{
+  width:100%;padding:10px;margin:6px 0 12px;border-radius:8px;border:none
+}
+#adminPanel button{
+  padding:12px;border:none;border-radius:8px;
+  background:#38bdf8;color:#000;font-weight:bold;width:100%;margin-bottom:8px
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <div class="hero">
-  <img src="logo.png" alt="Void Data Services">
-  <h1>Premium Digital & Data Solutions for Growing Businesses</h1>
-  <p>Agency-level websites, accurate data processing, and executive dashboards — delivered reliably.</p>
+  <img src="logo.png" id="adminTrigger">
+  <h1 id="heroHeadline">Premium Digital & Data Solutions for Growing Businesses</h1>
+  <p>Accurate data processing, executive dashboards, and high-conversion websites — delivered with agency-level quality.</p>
   <a href="#contact" class="cta-btn">Get Free Quote</a>
   <a href="https://wa.me/918709523430" class="cta-btn">WhatsApp Now</a>
 </div>
 
 <div class="container">
+
+<!-- STARTER OFFER -->
+<div class="box offer" id="starterOfferBox">
+  <div class="countdown" id="countdownTimer">⏳ Limited-Time Deal Ending Soon</div>
+  <p style="color:#7dd3fc;font-weight:bold">🎯 Limited Slots: <span id="slotsLeft">10</span></p>
+
+  <h2>🔥 Starter Pack (New Clients)</h2>
+  <ul>
+    <li>✔ Data Entry (100 records) — ₹699</li>
+    <li>✔ Excel Basic Dashboard — ₹999</li>
+    <li>✔ Web Research (50 leads) — ₹399</li>
+    <li>✔ One-Page Website — ₹2,499</li>
+  </ul>
+
+  <h3>Total Starter Price: <span id="starterOfferPrice">₹2,999</span></h3>
+  <a href="https://wa.me/918709523430" class="cta-btn">Claim Offer</a>
+</div>
 
 <!-- CORE SERVICES -->
 <div class="box">
@@ -175,83 +186,29 @@ h1,h2,h3{color:#7dd3fc}
 
   <div class="services-grid">
 
-    <!-- Websites -->
-    <div class="service-card" onclick="toggleService('web')">
+    <div class="service-card" onclick="openService('web')">
       <div class="service-icon">🌐</div>
       <div class="service-title">Websites</div>
       <div class="service-sub">Business & Landing Pages</div>
     </div>
 
-    <!-- Data Entry -->
-    <div class="service-card" onclick="toggleService('data')">
+    <div class="service-card" onclick="openService('data')">
       <div class="service-icon">📝</div>
       <div class="service-title">Data Entry</div>
       <div class="service-sub">Data Processing</div>
     </div>
 
-    <!-- Excel -->
-    <div class="service-card" onclick="toggleService('excel')">
-      <span class="popular-badge">MOST POPULAR</span>
+    <div class="service-card" onclick="openService('excel')">
+      <div class="popular">MOST POPULAR</div>
       <div class="service-icon">📊</div>
-      <div class="service-title">Excel</div>
-      <div class="service-sub">Dashboards & Reports</div>
+      <div class="service-title">Excel Dashboards</div>
+      <div class="service-sub">Reports & KPIs</div>
     </div>
 
-    <!-- Leads -->
-    <div class="service-card" onclick="toggleService('leads')">
+    <div class="service-card" onclick="openService('leads')">
       <div class="service-icon">🔍</div>
-      <div class="service-title">Lead Gen</div>
+      <div class="service-title">Lead Generation</div>
       <div class="service-sub">Web Research</div>
-    </div>
-
-    <!-- EXPANDS -->
-    <div class="service-expand" id="web">
-      <span class="save-badge">Save ₹2,500+</span>
-      <p>High-conversion business websites designed to build trust and generate leads.</p>
-      <ul>
-        <li>✔ Mobile responsive design</li>
-        <li>✔ WhatsApp + contact forms</li>
-        <li>✔ Basic SEO setup</li>
-        <li>✔ 2 rounds of revisions</li>
-      </ul>
-      <img src="https://via.placeholder.com/600x350?text=Website+Portfolio" class="portfolio-img">
-      <p><strong>Delivery:</strong> 2–7 working days | <strong>₹3,000 – ₹12,000+</strong></p>
-    </div>
-
-    <div class="service-expand" id="data">
-      <span class="save-badge">High Accuracy</span>
-      <p>Clean, validated data from PDFs, images & handwritten files.</p>
-      <ul>
-        <li>✔ Excel / Word formatting</li>
-        <li>✔ Duplicate removal</li>
-        <li>✔ Quality validation</li>
-      </ul>
-      <img src="https://via.placeholder.com/600x350?text=Data+Entry+Portfolio" class="portfolio-img">
-      <p><strong>Delivery:</strong> Same day – multi day | <strong>₹5 – ₹15 / page</strong></p>
-    </div>
-
-    <div class="service-expand" id="excel">
-      <span class="save-badge">Top Choice</span>
-      <p>Executive Excel dashboards for sales, expenses, KPIs & management reporting.</p>
-      <ul>
-        <li>✔ Automated dashboards</li>
-        <li>✔ Charts & KPIs</li>
-        <li>✔ Editable sheets</li>
-      </ul>
-      <img src="https://via.placeholder.com/600x350?text=Excel+Dashboard+Portfolio" class="portfolio-img">
-      <p><strong>Delivery:</strong> 1–3 working days | <strong>₹1,000 – ₹8,000+</strong></p>
-    </div>
-
-    <div class="service-expand" id="leads">
-      <span class="save-badge">Verified Leads</span>
-      <p>Targeted B2B & local business lead generation.</p>
-      <ul>
-        <li>✔ Excel/CSV lists</li>
-        <li>✔ Company & contact info</li>
-        <li>✔ Clean formatting</li>
-      </ul>
-      <img src="https://via.placeholder.com/600x350?text=Lead+Gen+Portfolio" class="portfolio-img">
-      <p><strong>Delivery:</strong> 1–5 working days | <strong>₹2 – ₹8 / lead</strong></p>
     </div>
 
   </div>
@@ -270,12 +227,11 @@ h1,h2,h3{color:#7dd3fc}
 <!-- ABOUT -->
 <div class="box">
   <h2>About Void Data Services</h2>
-  <div class="founder">
-    <img src="Founder.jpg" alt="Rahul Kumar Founder">
+  <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+    <img src="Founder.jpg" style="width:160px;border-radius:50%;border:3px solid #38bdf8">
     <div>
       <h3>Rahul Kumar — Founder & Operations Lead</h3>
-      <p>Void Data Services helps businesses grow through accurate data, professional reporting, and high-conversion digital solutions.</p>
-      <p>We focus on reliability, confidentiality, and long-term partnerships.</p>
+      <p>We focus on accuracy, confidentiality, and long-term partnerships with Indian and global businesses.</p>
       <p><strong>Email:</strong> voiddataservices@gmail.com</p>
       <p><strong>WhatsApp:</strong> +91 8709523430</p>
     </div>
@@ -300,15 +256,128 @@ h1,h2,h3{color:#7dd3fc}
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width:34px">
 </a>
 
+<!-- OVERLAY + SHEET -->
+<div class="sheet-overlay" id="overlay" onclick="closeSheet()"></div>
+
+<div class="sheet" id="serviceSheet">
+  <div class="sheet-close" onclick="closeSheet()">❌</div>
+  <div id="sheetContent"></div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="adminPanel">
+  <h2>🔐 Admin Panel</h2>
+  <input type="password" id="adminPass" placeholder="Admin Password">
+  <button onclick="adminLogin()">Login</button>
+
+  <div id="adminControls" style="display:none">
+    <label>Hero Headline</label>
+    <input id="adminHero">
+    <label>Starter Price</label>
+    <input id="adminOfferPrice">
+    <label>Slots Left</label>
+    <input id="adminSlots" type="number">
+    <button onclick="saveAdmin()">Save</button>
+    <button onclick="closeAdmin()">Close</button>
+  </div>
+</div>
+
 <script>
-function toggleService(id){
-  document.querySelectorAll('.service-expand').forEach(el=>{
-    if(el.id===id){
-      el.style.display = el.style.display==="block" ? "none" : "block";
-    } else {
-      el.style.display="none";
-    }
-  });
+/* ADMIN SECRET */
+let taps=0;
+adminTrigger.onclick=()=>{taps++;if(taps>=5){adminPanel.style.display='block';taps=0}}
+const ADMIN_PASSWORD="Voidlord2002";
+
+function adminLogin(){
+  if(adminPass.value===ADMIN_PASSWORD){
+    adminControls.style.display="block";
+    adminHero.value=localStorage.getItem("heroText")||"";
+    adminOfferPrice.value=localStorage.getItem("starterPrice")||"";
+    adminSlots.value=localStorage.getItem("slotsLeft")||"10";
+  } else alert("Wrong password");
+}
+function saveAdmin(){
+  localStorage.setItem("heroText",adminHero.value);
+  localStorage.setItem("starterPrice",adminOfferPrice.value);
+  localStorage.setItem("slotsLeft",adminSlots.value);
+  location.reload();
+}
+function closeAdmin(){adminPanel.style.display="none"}
+
+if(localStorage.getItem("heroText")) heroHeadline.innerText=localStorage.getItem("heroText");
+if(localStorage.getItem("starterPrice")) starterOfferPrice.innerText="₹"+localStorage.getItem("starterPrice");
+if(localStorage.getItem("slotsLeft")) slotsLeft.innerText=localStorage.getItem("slotsLeft");
+
+/* SERVICE APP SHEET */
+function openService(type){
+  overlay.style.display="block";
+  serviceSheet.classList.add("open");
+
+  let html="";
+
+  if(type==="web"){
+    html=`<h2>🌐 Business Websites & Landing Pages</h2>
+    <span class="save-badge">Save ₹2,501</span>
+    <p>High-conversion websites designed to build trust and generate leads.</p>
+    <ul>
+      <li>✔ Mobile responsive</li>
+      <li>✔ WhatsApp + contact forms</li>
+      <li>✔ Basic SEO setup</li>
+      <li>✔ 2 rounds of revisions</li>
+    </ul>
+    <img src="website-portfolio.jpg" class="portfolio-img">
+    <p><strong>Delivery:</strong> 2 – 7 working days</p>
+    <p><strong>Range:</strong> ₹3,000 – ₹12,000+</p>`;
+  }
+
+  if(type==="data"){
+    html=`<h2>📝 Data Entry & Data Processing</h2>
+    <span class="save-badge">Save ₹501</span>
+    <p>High-accuracy data entry from PDFs, images, and handwritten documents.</p>
+    <ul>
+      <li>✔ Clean Excel/Word</li>
+      <li>✔ Duplicate removal</li>
+      <li>✔ Validation checks</li>
+    </ul>
+    <img src="dataentry-portfolio.jpg" class="portfolio-img">
+    <p><strong>Delivery:</strong> Same day to multi-day</p>
+    <p><strong>Range:</strong> ₹5 – ₹15 per page</p>`;
+  }
+
+  if(type==="excel"){
+    html=`<h2>📊 Excel Dashboards & Reports</h2>
+    <span class="save-badge">Save ₹1,001</span>
+    <p>Professional Excel dashboards for sales, expenses & KPI tracking.</p>
+    <ul>
+      <li>✔ Automated dashboards</li>
+      <li>✔ Charts & KPIs</li>
+      <li>✔ Editable sheets</li>
+    </ul>
+    <img src="excel-portfolio.jpg" class="portfolio-img">
+    <p><strong>Delivery:</strong> 1 – 3 working days</p>
+    <p><strong>Range:</strong> ₹1,000 – ₹8,000+</p>`;
+  }
+
+  if(type==="leads"){
+    html=`<h2>🔍 Web Research & Lead Generation</h2>
+    <span class="save-badge">Save ₹351</span>
+    <p>Verified business leads to support sales & marketing.</p>
+    <ul>
+      <li>✔ Excel/CSV list</li>
+      <li>✔ Company & contact info</li>
+      <li>✔ Clean formatted data</li>
+    </ul>
+    <img src="leads-portfolio.jpg" class="portfolio-img">
+    <p><strong>Delivery:</strong> 1 – 5 working days</p>
+    <p><strong>Range:</strong> ₹2 – ₹8 per lead</p>`;
+  }
+
+  sheetContent.innerHTML=html;
+}
+
+function closeSheet(){
+  overlay.style.display="none";
+  serviceSheet.classList.remove("open");
 }
 </script>
 
