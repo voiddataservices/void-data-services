@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://voiddataservices.github.io/void-data-services/sitemap.xml
