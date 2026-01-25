@@ -7,7 +7,7 @@
 
 <style>
 body{margin:0;font-family:Arial,sans-serif;background:#050b1a;color:#fff}
-h1,h2,h3{color:#7dd3fc}
+h1,h2,h3,h4{color:#7dd3fc}
 .hero{text-align:center;padding:60px 20px}
 .hero img{max-width:260px}
 .cta-btn{background:#38bdf8;color:#000;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:bold;margin:5px;display:inline-block}
@@ -36,6 +36,41 @@ details[open] summary::after{content:"−"}
 .testimonial{display:none}
 .testimonial.active{display:block}
 
+/* Save ₹ badge */
+.save-badge{
+  display:inline-block;
+  background:#16a34a;
+  color:#fff;
+  padding:5px 12px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:bold;
+  margin:8px 0;
+  animation:pulse 1.6s infinite;
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(22,163,74,.6)}
+  70%{box-shadow:0 0 0 14px rgba(22,163,74,0)}
+  100%{box-shadow:0 0 0 0 rgba(22,163,74,0)}
+}
+
+/* Portfolio cards + micro animation */
+.portfolio-card{
+  background:#020617;
+  border:1px solid #1e293b;
+  border-radius:12px;
+  padding:14px;
+  margin:12px 0;
+  font-size:14px;
+  transition:all .3s ease;
+}
+.portfolio-card:hover{
+  transform:translateY(-4px) scale(1.01);
+  box-shadow:0 10px 25px rgba(56,189,248,.15);
+  border-color:#38bdf8;
+}
+
 .whatsapp-float{
   position:fixed;right:20px;bottom:90px;
   background:#25D366;color:#fff;
@@ -44,6 +79,7 @@ details[open] summary::after{content:"−"}
   z-index:999
 }
 
+/* ADMIN PANEL */
 #adminPanel{
   display:none;position:fixed;inset:0;
   background:#050b1a;z-index:99999;
@@ -99,10 +135,10 @@ details[open] summary::after{content:"−"}
   <p>Perfect for new clients to test our quality before starting long-term projects.</p>
 
   <ul>
-    <li>✔ Data Entry (100 records/pages) — <small>Regular ₹1,200 → <strong>Starter ₹699</strong></small></li>
-    <li>✔ Excel Report / Basic Dashboard — <small>Regular ₹2,000 → <strong>Starter ₹999</strong></small></li>
-    <li>✔ Web Research (50 verified leads) — <small>Regular ₹750 → <strong>Starter ₹399</strong></small></li>
-    <li>✔ One-Page Business Website — <small>Regular ₹5,000 → <strong>Starter ₹2,499</strong></small></li>
+    <li>✔ Data Entry (100 records) — <small>₹1,200 → <strong>₹699</strong></small></li>
+    <li>✔ Excel Dashboard — <small>₹2,000 → <strong>₹999</strong></small></li>
+    <li>✔ Web Research (50 leads) — <small>₹750 → <strong>₹399</strong></small></li>
+    <li>✔ One-Page Website — <small>₹5,000 → <strong>₹2,499</strong></small></li>
   </ul>
 
   <h3>Total Starter Price: <span id="starterOfferPrice">₹2,999</span></h3>
@@ -110,48 +146,140 @@ details[open] summary::after{content:"−"}
   <a href="https://wa.me/918709523430" class="cta-btn">Claim Offer on WhatsApp</a>
 </div>
 
-<!-- CORE SERVICES -->
+<!-- ================= CORE SERVICES (ENHANCED) ================= -->
 <div class="box fade">
   <h2>Our Core Services</h2>
 
+  <!-- BUSINESS WEBSITES -->
   <details>
-    <summary>🌐 Business Websites</summary>
-    <p>We build professional business websites to generate leads and build trust.</p>
+    <summary>🌐 Business Websites & Landing Pages</summary>
+    <span class="save-badge">Save ₹2,501</span>
+
+    <p>
+      We design modern, fast-loading business websites that help you build trust,
+      generate leads, and convert visitors into real customers.
+    </p>
+
+    <h4>What You Get</h4>
     <ul>
-      <li>Time: 2–7 days</li>
-      <li>Includes mobile design, basic SEO, WhatsApp & contact forms</li>
+      <li>✔ Fully designed business website</li>
+      <li>✔ Mobile & tablet responsive layout</li>
+      <li>✔ WhatsApp + contact form</li>
+      <li>✔ Basic SEO setup</li>
+      <li>✔ 2 rounds of revisions</li>
     </ul>
-    <p><strong>Price:</strong> <span id="priceWebsites">₹3,000 – ₹12,000+</span></p>
+
+    <h4>Mini Portfolio</h4>
+    <div class="portfolio-card">
+      🖥️ Local Service Website<br>
+      One-page site generating WhatsApp inquiries.
+    </div>
+
+    <h4>Delivery Time</h4>
+    <p>2 – 7 working days</p>
+
+    <h4>FAQ</h4>
+    <p><strong>Q:</strong> Will it work on mobile?<br>
+       <strong>A:</strong> Yes, 100% mobile responsive.</p>
+
+    <p><strong>Service Range:</strong> <span id="priceWebsites">₹3,000 – ₹12,000+</span></p>
   </details>
 
+  <!-- DATA ENTRY -->
   <details>
-    <summary>📝 Data Entry Projects</summary>
-    <p>High-accuracy data entry from PDFs, images & documents.</p>
+    <summary>📝 Data Entry & Data Processing</summary>
+    <span class="save-badge">Save ₹501</span>
+
+    <p>
+      High-accuracy data entry from PDFs, images, and handwritten documents into
+      clean Excel or Word files.
+    </p>
+
+    <h4>What You Get</h4>
     <ul>
-      <li>Time: Depends on volume (same-day to multi-day)</li>
-      <li>Includes quality checks & formatting</li>
+      <li>✔ Clean formatted Excel/Word</li>
+      <li>✔ Duplicate removal</li>
+      <li>✔ Validation & accuracy checks</li>
     </ul>
-    <p><strong>Price:</strong> <span id="priceDataEntry">₹5 – ₹15 per page</span></p>
+
+    <h4>Mini Portfolio</h4>
+    <div class="portfolio-card">
+      📝 Invoice Conversion<br>
+      2,000+ invoices converted to Excel.
+    </div>
+
+    <h4>Delivery Time</h4>
+    <p>Same day to multi-day</p>
+
+    <h4>FAQ</h4>
+    <p><strong>Q:</strong> Is data double-checked?<br>
+       <strong>A:</strong> Yes, for accuracy.</p>
+
+    <p><strong>Service Range:</strong> <span id="priceDataEntry">₹5 – ₹15 per page</span></p>
   </details>
 
+  <!-- EXCEL -->
   <details>
     <summary>📊 Excel Dashboards & Reports</summary>
-    <p>Excel dashboards for sales, expenses, KPIs & business tracking.</p>
+    <span class="save-badge">Save ₹1,001</span>
+
+    <p>
+      Professional Excel dashboards for sales, expenses, KPIs and management reporting.
+    </p>
+
+    <h4>What You Get</h4>
     <ul>
-      <li>Time: 1–3 days</li>
-      <li>Automated & easy-to-use reports</li>
+      <li>✔ Automated Excel dashboard</li>
+      <li>✔ Charts & KPIs</li>
+      <li>✔ Editable data sheets</li>
     </ul>
-    <p><strong>Price:</strong> <span id="priceExcel">₹1,000 – ₹8,000+</span></p>
+
+    <h4>Mini Portfolio</h4>
+    <div class="portfolio-card">
+      📊 Sales & Expense Dashboard<br>
+      Automated monthly performance tracking.
+    </div>
+
+    <h4>Delivery Time</h4>
+    <p>1 – 3 working days</p>
+
+    <h4>FAQ</h4>
+    <p><strong>Q:</strong> Can I update it myself?<br>
+       <strong>A:</strong> Yes, fully editable.</p>
+
+    <p><strong>Service Range:</strong> <span id="priceExcel">₹1,000 – ₹8,000+</span></p>
   </details>
 
+  <!-- WEB RESEARCH -->
   <details>
-    <summary>🔍 Web Research Projects</summary>
-    <p>Verified lead generation & business research.</p>
+    <summary>🔍 Web Research & Lead Generation</summary>
+    <span class="save-badge">Save ₹351</span>
+
+    <p>
+      Verified lead generation and online research to support sales and marketing campaigns.
+    </p>
+
+    <h4>What You Get</h4>
     <ul>
-      <li>Time: 1–5 days</li>
-      <li>Clean Excel delivery</li>
+      <li>✔ Excel/CSV lead list</li>
+      <li>✔ Company & contact info</li>
+      <li>✔ Clean & formatted data</li>
     </ul>
-    <p><strong>Price:</strong> <span id="priceResearch">₹2 – ₹8 per lead</span></p>
+
+    <h4>Mini Portfolio</h4>
+    <div class="portfolio-card">
+      🔍 B2B Lead List<br>
+      500 verified business leads delivered.
+    </div>
+
+    <h4>Delivery Time</h4>
+    <p>1 – 5 working days</p>
+
+    <h4>FAQ</h4>
+    <p><strong>Q:</strong> Are leads verified?<br>
+       <strong>A:</strong> Yes, basic verification applied.</p>
+
+    <p><strong>Service Range:</strong> <span id="priceResearch">₹2 – ₹8 per lead</span></p>
   </details>
 </div>
 
@@ -203,7 +331,6 @@ details[open] summary::after{content:"−"}
   <button onclick="adminLogin()">Login</button>
 
   <div id="adminControls" style="display:none">
-
     <label>Hero Headline</label>
     <input id="adminHero">
 
@@ -240,18 +367,17 @@ setInterval(()=>{
   tests[ti].classList.add('active');
 },4000);
 
-/* Secret Admin (5 clicks on logo) */
+/* Secret Admin */
 let taps=0;
 adminTrigger.addEventListener('click',()=>{
   taps++;
   if(taps>=5){
-    document.getElementById("adminPanel").style.display="block";
+    adminPanel.style.display="block";
     taps=0;
   }
   setTimeout(()=>taps=0,1500);
 });
 
-/* ADMIN */
 const ADMIN_PASSWORD="Voidlord2002";
 
 function adminLogin(){
@@ -267,7 +393,7 @@ function saveAdmin(){
   localStorage.setItem("offerDateTime", adminOfferDate.value);
   localStorage.setItem("slotsLeft", adminSlots.value);
   localStorage.setItem("showOffer", adminShowOffer.value);
-  alert("Admin settings saved. Refresh page.");
+  alert("Saved. Refresh page.");
 }
 
 function loadAdmin(){
@@ -278,11 +404,8 @@ function loadAdmin(){
   adminShowOffer.value = localStorage.getItem("showOffer") || "show";
 }
 
-function closeAdmin(){
-  adminPanel.style.display="none";
-}
+function closeAdmin(){adminPanel.style.display="none";}
 
-/* APPLY SETTINGS */
 document.addEventListener("DOMContentLoaded",()=>{
   if(localStorage.getItem("heroText")) heroHeadline.innerText = localStorage.getItem("heroText");
   if(localStorage.getItem("starterPrice")) starterOfferPrice.innerText = "₹"+localStorage.getItem("starterPrice");
@@ -293,12 +416,10 @@ document.addEventListener("DOMContentLoaded",()=>{
   startCountdownAdmin(dt);
 });
 
-/* COUNTDOWN */
 function startCountdownAdmin(endDateTime){
   const end = new Date(endDateTime).getTime();
   setInterval(()=>{
-    const now = Date.now();
-    const diff = end-now;
+    const diff=end-Date.now();
     if(diff<=0){countdownTimer.innerText="Offer Expired";return;}
     const d=Math.floor(diff/(1000*60*60*24));
     const h=Math.floor((diff/(1000*60*60))%24);
