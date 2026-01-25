@@ -198,6 +198,45 @@ details[open] summary::after{content:"−"}
 <!-- ADMIN PANEL (UNCHANGED) -->
 <div id="adminPanel"></div>
 
+  <script>
+/* FORCE SHOW ALL FADE SECTIONS */
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".fade").forEach(el => {
+    el.classList.add("show");
+  });
+});
+
+/* TESTIMONIAL ROTATOR */
+let ti = 0;
+const tests = document.querySelectorAll('.testimonial');
+setInterval(() => {
+  tests[ti].classList.remove('active');
+  ti = (ti + 1) % tests.length;
+  tests[ti].classList.add('active');
+}, 4000);
+
+/* COUNTDOWN TIMER */
+function startCountdown(){
+  const end = new Date("2026-02-28T23:59:59").getTime();
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = end - now;
+    if(diff <= 0){
+      document.getElementById("countdownTimer").innerText = "Offer Expired";
+      return;
+    }
+    const d = Math.floor(diff/(1000*60*60*24));
+    const h = Math.floor((diff/(1000*60*60))%24);
+    const m = Math.floor((diff/(1000*60))%60);
+    const s = Math.floor((diff/1000)%60);
+    document.getElementById("countdownTimer").innerText =
+      `${d}d ${h}h ${m}m ${s}s`;
+  }, 1000);
+}
+startCountdown();
+  </script>
+  
 </body>
 </html>
+
 
