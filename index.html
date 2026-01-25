@@ -258,223 +258,64 @@ details[open] summary::after{content:"−"}
 <a href="https://wa.me/918709523430" class="whatsapp-float">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width:34px;height:34px;">
 </a>
-
-<!-- ADMIN PANEL (UNCHANGED) -->
-<div id="adminPanel">
-  <h2>🔐 Admin Panel</h2>
-
-  <div id="adminLogin">
-    <input type="password" id="adminPass" placeholder="Admin Password">
-    <button onclick="adminLogin()">Login</button>
-  </div>
-
-  <div id="adminControls" style="display:none">
-
-    <label>Hero Headline</label>
-    <input id="adminHero">
-
-    <label>Starter Offer Price</label>
-    <input id="adminOfferPrice">
-
-    <label>Offer End Date</label>
-    <input id="adminOfferDate" type="date">
-
-    <label>Available Slots</label>
-    <input id="adminSlots" type="number">
-
-    <label>Show / Hide Offer</label>
-    <select id="adminShowOffer">
-      <option value="show">Show Offer</option>
-      <option value="hide">Hide Offer</option>
-    </select>
-
-    <button onclick="saveAdmin()">Save Changes</button>
-    <button onclick="closeAdmin()">Close Admin Panel</button>
-
-  </div>
-</div>
+<script>
+/* ================= ADMIN SAVE ================= */
 function saveAdmin(){
   localStorage.setItem("heroText", adminHero.value);
-  localStorage.setItem("offerPrice", adminOfferPrice.value);
-  localStorage.setItem("offerDate", adminOfferDate.value);
+  localStorage.setItem("starterPrice", adminOfferPrice.value);
+  localStorage.setItem("offerDateTime", adminOfferDate.value);
   localStorage.setItem("slotsLeft", adminSlots.value);
   localStorage.setItem("showOffer", adminShowOffer.value);
+
   alert("Admin settings saved. Refresh page.");
 }
 
+/* ================= LOAD ADMIN FORM ================= */
 function loadAdmin(){
   adminHero.value = localStorage.getItem("heroText") || "";
-  adminOfferPrice.value = localStorage.getItem("offerPrice") || "";
-  adminOfferDate.value = localStorage.getItem("offerDate") || "";
+  adminOfferPrice.value = localStorage.getItem("starterPrice") || "";
+  adminOfferDate.value = localStorage.getItem("offerDateTime") || "";
   adminSlots.value = localStorage.getItem("slotsLeft") || "10";
   adminShowOffer.value = localStorage.getItem("showOffer") || "show";
 }
 
-function closeAdmin(){
-  document.getElementById("adminPanel").style.display = "none";
-}
-  <script>
-/* FORCE SHOW ALL FADE SECTIONS */
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".fade").forEach(el => {
-    el.classList.add("show");
-  });
-});
-
-/* TESTIMONIAL ROTATOR */
-let ti = 0;
-const tests = document.querySelectorAll('.testimonial');
-setInterval(() => {
-  tests[ti].classList.remove('active');
-  ti = (ti + 1) % tests.length;
-  tests[ti].classList.add('active');
-}, 4000);
-
-/* COUNTDOWN TIMER */
-function startCountdown(){
-  const end = new Date("2026-02-28T23:59:59").getTime();
-  setInterval(() => {
-    const now = new Date().getTime();
-    const diff = end - now;
-    if(diff <= 0){
-      document.getElementById("countdownTimer").innerText = "Offer Expired";
-      return;
-    }
-    const d = Math.floor(diff/(1000*60*60*24));
-    const h = Math.floor((diff/(1000*60*60))%24);
-    const m = Math.floor((diff/(1000*60))%60);
-    const s = Math.floor((diff/1000)%60);
-    document.getElementById("countdownTimer").innerText =
-      `${d}d ${h}h ${m}m ${s}s`;
-  }, 1000);
-}
-startCountdown();
-  </script>
-  <!-- ================= NEW ADMIN PANEL ================= -->
-<div id="adminPanel" style="display:none;position:fixed;inset:0;background:#050b1a;z-index:99999;padding:20px;overflow:auto">
-
-  <h2>🔐 Void Admin Panel</h2>
-
-  <div id="adminLoginBox">
-    <input type="password" id="adminPassword" placeholder="Enter Admin Password">
-    <button onclick="adminLogin()">Login</button>
-  </div>
-
-  <div id="adminControlsBox" style="display:none">
-
-    <label>Show Limited-Time Offer (yes / no)</label>
-    <input id="adminShowOffer" placeholder="yes or no">
-
-    <label>Show Countdown Timer (yes / no)</label>
-    <input id="adminShowTimer" placeholder="yes or no">
-
-    <label>Starter Pack Price (₹)</label>
-    <input id="adminStarterPrice" placeholder="2999">
-
-    <label>Offer End Date & Time</label>
-    <input id="adminOfferDateTime" type="datetime-local">
-
-    <label>Number of Slots Available</label>
-    <input id="adminSlots" placeholder="10">
-
-    <button onclick="saveAdminSettings()">Save Settings</button>
-    <button onclick="closeAdmin()">Close Admin</button>
-
-  </div>
-</div>
-  <script>
-/* ================= ADMIN SYSTEM ================= */
-const ADMIN_PASSWORD = "Voidlord2002";
-
-/* Secret trigger: click logo 5 times */
-let adminTapCount = 0;
-document.querySelector(".hero img").addEventListener("click", () => {
-  adminTapCount++;
-  if(adminTapCount >= 5){
-    document.getElementById("adminPanel").style.display = "block";
-    adminTapCount = 0;
-  }
-  setTimeout(()=>adminTapCount=0,1500);
-});
-
-function adminLogin(){
-  if(document.getElementById("adminPassword").value === ADMIN_PASSWORD){
-    document.getElementById("adminLoginBox").style.display = "none";
-    document.getElementById("adminControlsBox").style.display = "block";
-    loadAdminSettings();
-  } else {
-    alert("Wrong password");
-  }
-}
-
-function saveAdminSettings(){
-  localStorage.setItem("showOffer", adminShowOffer.value.toLowerCase());
-  localStorage.setItem("showTimer", adminShowTimer.value.toLowerCase());
-  localStorage.setItem("starterPrice", adminStarterPrice.value);
-  localStorage.setItem("offerDateTime", adminOfferDateTime.value);
-  localStorage.setItem("slotsLeft", adminSlots.value);
-
-  alert("Admin settings saved! Refresh page.");
-}
-
-function loadAdminSettings(){
-  adminShowOffer.value = localStorage.getItem("showOffer") || "yes";
-  adminShowTimer.value = localStorage.getItem("showTimer") || "yes";
-  adminStarterPrice.value = localStorage.getItem("starterPrice") || "";
-  adminOfferDateTime.value = localStorage.getItem("offerDateTime") || "";
-  adminSlots.value = localStorage.getItem("slotsLeft") || "";
-}
-
+/* ================= CLOSE ADMIN ================= */
 function closeAdmin(){
   document.getElementById("adminPanel").style.display = "none";
 }
 
-<script>
-/* ================= APPLY ADMIN SETTINGS ON LOAD (FINAL CLEAN) ================= */
+/* ================= APPLY SETTINGS ON LOAD ================= */
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* HERO TEXT */
-  if (localStorage.getItem("heroText")) {
-    document.getElementById("heroHeadline").innerText =
-      localStorage.getItem("heroText");
+  // Hero text
+  if(localStorage.getItem("heroText")){
+    heroHeadline.innerText = localStorage.getItem("heroText");
   }
 
-  /* SHOW / HIDE OFFER */
-  if (localStorage.getItem("showOffer") === "hide") {
-    const offerBox = document.getElementById("starterOfferBox");
-    if (offerBox) offerBox.style.display = "none";
+  // Starter price
+  if(localStorage.getItem("starterPrice")){
+    starterOfferPrice.innerText = "₹" + localStorage.getItem("starterPrice");
   }
 
-  /* SHOW / HIDE TIMER */
-  if (localStorage.getItem("showTimer") === "no") {
-    const timer = document.getElementById("countdownTimer");
-    if (timer) timer.style.display = "none";
+  // Slots left
+  if(localStorage.getItem("slotsLeft")){
+    slotsLeft.innerText = localStorage.getItem("slotsLeft");
   }
 
-  /* STARTER PRICE */
-  if (localStorage.getItem("starterPrice")) {
-    const price = document.getElementById("starterOfferPrice");
-    if (price) price.innerText = "₹" + localStorage.getItem("starterPrice");
+  // Show / Hide Offer
+  if(localStorage.getItem("showOffer") === "hide"){
+    document.getElementById("starterOfferBox").style.display = "none";
   }
 
-  /* SLOTS LEFT */
-  if (localStorage.getItem("slotsLeft")) {
-    const slots = document.getElementById("slotsLeft");
-    if (slots) slots.innerText = localStorage.getItem("slotsLeft");
-  }
-
-  /* COUNTDOWN WITH ADMIN-CONTROLLED DATE & TIME */
-  const savedDateTime =
-    localStorage.getItem("offerDateTime") || "2026-02-28T23:59";
-
-  if (typeof startCountdownAdmin === "function") {
-    startCountdownAdmin(savedDateTime);
-  }
+  // Countdown start
+  const savedDateTime = localStorage.getItem("offerDateTime") || "2026-02-28T23:59:59";
+  startCountdownAdmin(savedDateTime);
 });
-</script>
+
 /* ================= ADMIN COUNTDOWN ================= */
 function startCountdownAdmin(endDateTime){
   const end = new Date(endDateTime).getTime();
+
   setInterval(() => {
     const now = new Date().getTime();
     const diff = end - now;
@@ -484,18 +325,21 @@ function startCountdownAdmin(endDateTime){
       return;
     }
 
-    const d = Math.floor(diff/(1000*60*60*24));
-    const h = Math.floor((diff/(1000*60*60))%24);
-    const m = Math.floor((diff/(1000*60))%60);
-    const s = Math.floor((diff/1000)%60);
+    const d = Math.floor(diff / (1000*60*60*24));
+    const h = Math.floor((diff / (1000*60*60)) % 24);
+    const m = Math.floor((diff / (1000*60)) % 60);
+    const s = Math.floor((diff / 1000) % 60);
 
     document.getElementById("countdownTimer").innerText =
-      `${d}d ${h}h ${m}m ${s}s`;
+      `⏰ ${d}d ${h}h ${m}m ${s}s`;
   }, 1000);
 }
+</script>
+
   </script>
 </body>
 </html>
+
 
 
 
