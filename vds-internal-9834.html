@@ -1,103 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <!-- Hide from search engines -->
-  <meta name="robots" content="noindex, nofollow">
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Founder Console | Void Data Services</title>
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.png">
-
-  <!-- Tailwind Dark Mode Config -->
-  <script>
-    tailwind = { darkMode: 'class' }
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Founder Console | Void Data Services</title>
+<link rel="icon" href="favicon.png">
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-slate-100 dark:bg-slate-950 dark:text-white">
+<body class="bg-slate-950 text-white">
 
-<!-- WARNING HEADER -->
-<div class="bg-red-600 text-white text-center py-3 font-bold">
-  INTERNAL USE ONLY — UNAUTHORIZED ACCESS PROHIBITED
-</div>
-
-<!-- HEADER -->
-<header class="border-b bg-white dark:bg-slate-900">
-  <div class="max-w-6xl mx-auto p-6 flex justify-between items-center">
-    <div class="flex items-center space-x-3">
-      <img src="logo.png" class="h-8" alt="Void Data Services">
-      <span class="text-2xl font-black text-blue-600 dark:text-blue-400">
-        Founder Console
-      </span>
-    </div>
-
-    <button onclick="toggleDarkMode()" class="text-xl">
-      🌙
-    </button>
-  </div>
-</header>
-
-<!-- CONTENT -->
-<section class="max-w-5xl mx-auto p-10">
-  <h1 class="text-4xl font-bold mb-6">Rahul — Internal Dashboard</h1>
-
-  <p class="mb-6 text-slate-500 dark:text-slate-400">
-    This page is for internal operations only.
+<section class="max-w-7xl mx-auto p-16">
+  <h1 class="text-4xl font-bold mb-4">Founder Console</h1>
+  <p class="text-slate-400 mb-10">
+    Private operational dashboard for internal management.
   </p>
 
-  <div class="grid md:grid-cols-2 gap-6">
+  <div class="grid md:grid-cols-3 gap-8">
 
-    <a href="https://drive.google.com" target="_blank"
-       class="bg-white dark:bg-slate-900 border p-6 rounded-xl hover:shadow-lg">
-      📁 Google Drive
-    </a>
+    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+      <h3 class="font-bold mb-2">📥 Leads</h3>
+      <p class="text-slate-400 text-sm">Track incoming Formspree leads manually.</p>
+    </div>
 
-    <a href="https://notion.so" target="_blank"
-       class="bg-white dark:bg-slate-900 border p-6 rounded-xl hover:shadow-lg">
-      📝 Notion Workspace
-    </a>
+    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+      <h3 class="font-bold mb-2">📂 Projects</h3>
+      <p class="text-slate-400 text-sm">Manage active and completed projects.</p>
+    </div>
 
-    <a href="https://docs.google.com" target="_blank"
-       class="bg-white dark:bg-slate-900 border p-6 rounded-xl hover:shadow-lg">
-      📄 Invoices & Docs
-    </a>
-
-    <a href="https://sheets.google.com" target="_blank"
-       class="bg-white dark:bg-slate-900 border p-6 rounded-xl hover:shadow-lg">
-      📊 Tracking Sheets
-    </a>
-
-    <a href="https://analytics.google.com" target="_blank"
-       class="bg-white dark:bg-slate-900 border p-6 rounded-xl hover:shadow-lg">
-      📈 Google Analytics
-    </a>
-
-    <a href="https://github.com" target="_blank"
-       class="bg-white dark:bg-slate-900 border p-6 rounded-xl hover:shadow-lg">
-      🧑‍💻 GitHub Repo
-    </a>
+    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+      <h3 class="font-bold mb-2">📊 Operations</h3>
+      <p class="text-slate-400 text-sm">Internal notes, workflows, and tracking.</p>
+    </div>
 
   </div>
+
+  <div class="mt-12 bg-slate-900 border border-red-800 p-6 rounded-xl">
+    <p class="text-red-400 font-bold">
+      🔒 PRIVATE PAGE — DO NOT SHARE THIS URL
+    </p>
+  </div>
 </section>
-
-<!-- SCRIPT -->
-<script>
-function toggleDarkMode(){
-  document.documentElement.classList.toggle('dark');
-  localStorage.setItem(
-    'theme',
-    document.documentElement.classList.contains('dark') ? 'dark' : 'light'
-  );
-}
-
-if(localStorage.getItem('theme') === 'dark'){
-  document.documentElement.classList.add('dark');
-}
-</script>
 
 </body>
 </html>
