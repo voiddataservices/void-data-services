@@ -1,42 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Founder Console</title><link rel="icon" href="favicon.ico">
-<script>tailwind={darkMode:'class'}</script><script src="https://cdn.tailwindcss.com"></script>
+  <!-- Hide from search engines -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Founder Console | Void Data Services</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png">
+
+  <!-- Tailwind Dark Mode Config -->
+  <script>
+    tailwind = { darkMode: 'class' }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-slate-100 dark:bg-slate-950 dark:text-white">
 
+<!-- WARNING HEADER -->
+<div class="bg-red-600 text-white text-center py-3 font-bold">
+  INTERNAL USE ONLY — UNAUTHORIZED ACCESS PROHIBITED
+</div>
+
+<!-- HEADER -->
 <header class="border-b bg-white dark:bg-slate-900">
-<div class="max-w-6xl mx-auto p-6 flex justify-between items-center">
-<div class="flex items-center space-x-3"><img src="logo.png" class="h-8"><span class="text-2xl font-black text-blue-600 dark:text-blue-400">Void Data Services</span></div>
-<div class="flex items-center space-x-4"><button onclick="toggleDarkMode()">🌙</button><button onclick="openMobileMenu()" class="text-3xl">&#8942;</button></div>
-</div></header>
+  <div class="max-w-6xl mx-auto p-6 flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <img src="logo.png" class="h-8" alt="Void Data Services">
+      <span class="text-2xl font-black text-blue-600 dark:text-blue-400">
+        Founder Console
+      </span>
+    </div>
 
-<div id="mobileMenu" class="fixed top-0 right-0 h-full w-72 bg-white dark:bg-slate-900 shadow-2xl transform translate-x-full transition-transform duration-300 z-50">
-<div class="p-6 border-b flex justify-between"><b>Menu</b><button onclick="closeMobileMenu()">✕</button></div>
-<nav class="p-6 space-y-4">
-<a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="pricing.html">Pricing</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
-<a href="portal.html" class="block bg-blue-600 text-white text-center py-3 rounded">Client Portal</a>
-</nav></div>
+    <button onclick="toggleDarkMode()" class="text-xl">
+      🌙
+    </button>
+  </div>
+</header>
 
+<!-- CONTENT -->
 <section class="max-w-5xl mx-auto p-10">
-<h1 class="text-4xl font-bold mb-6">Founder Console</h1>
-<p>This page is for internal use only.</p>
+  <h1 class="text-4xl font-bold mb-6">Rahul — Internal Dashboard</h1>
 
-<ul class="mt-6 space-y-3">
-<li><a href="https://drive.google.com">Google Drive</a></li>
-<li><a href="https://notion.so">Notion</a></li>
-<li><a href="https://docs.google.com">Invoices</a></li>
-<li><a href="https://sheets.google.com">Tracking Sheet</a></li>
-</ul>
+  <p class="mb-6 text-slate-500 dark:text-slate-400">
+    This page is for internal operations only.
+  </p>
+
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <a href="https://drive.google.com" target="_blank"
+       class="bg-white dark:bg-slate-900 border p-6 rounded-xl hover:shadow-lg">
+      📁 Google Drive
+    </a>
+
+    <a href="https://notion.so" target="_blank"
+       class="bg-white dark:bg-slate-900 border p-6 rounded-xl hover:shadow-lg">
+      📝 Notion Workspace
+    </a>
+
+    <a href="https://docs.google.com" target="_blank"
+       class="bg-white dark:bg-slate-900 border p-6 rounded-xl hover:shadow-lg">
+      📄 Invoices & Docs
+    </a>
+
+    <a href="https://sheets.google.com" target="_blank"
+       class="bg-white dark:bg-slate-900 border p-6 rounded-xl hover:shadow-lg">
+      📊 Tracking Sheets
+    </a>
+
+    <a href="https://analytics.google.com" target="_blank"
+       class="bg-white dark:bg-slate-900 border p-6 rounded-xl hover:shadow-lg">
+      📈 Google Analytics
+    </a>
+
+    <a href="https://github.com" target="_blank"
+       class="bg-white dark:bg-slate-900 border p-6 rounded-xl hover:shadow-lg">
+      🧑‍💻 GitHub Repo
+    </a>
+
+  </div>
 </section>
 
+<!-- SCRIPT -->
 <script>
-function openMobileMenu(){mobileMenu.classList.remove('translate-x-full')}
-function closeMobileMenu(){mobileMenu.classList.add('translate-x-full')}
-function toggleDarkMode(){document.documentElement.classList.toggle('dark');localStorage.setItem('theme',document.documentElement.classList.contains('dark')?'dark':'light')}
-if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('dark')}
+function toggleDarkMode(){
+  document.documentElement.classList.toggle('dark');
+  localStorage.setItem(
+    'theme',
+    document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+  );
+}
+
+if(localStorage.getItem('theme') === 'dark'){
+  document.documentElement.classList.add('dark');
+}
 </script>
+
 </body>
 </html>
