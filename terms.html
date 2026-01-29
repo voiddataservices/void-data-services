@@ -1,34 +1,267 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms & Conditions | Void Data Services</title>
-<link rel="icon" href="favicon.png">
-<script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <title>Terms & Conditions | Void Data Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Terms and Conditions governing the use of Void Data Services website and services.">
+
+  <link rel="icon" href="favicon.png">
+
+  <script>tailwind={darkMode:'class'}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body{animation:fadeIn .4s ease-in}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+  </style>
 </head>
 
 <body class="bg-slate-950 text-white">
 
-<section class="max-w-5xl mx-auto p-16">
-  <h1 class="text-4xl font-bold mb-6">Terms & Conditions</h1>
+<!-- ================= MOBILE MENU ================= -->
+<div id="mobileMenu"
+class="fixed top-0 right-0 w-80 max-w-full h-full bg-slate-950 border-l border-slate-800 z-50 transform translate-x-full transition-transform duration-300">
 
-  <p class="text-slate-400 mb-4">
-    By accessing this website and using our services, you agree to be bound by these Terms.
-  </p>
+  <div class="p-6 flex justify-between items-center border-b border-slate-800">
+    <a href="index.html" class="flex items-center space-x-3">
+      <img src="logo.png" class="h-8">
+      <span class="font-bold text-blue-400">Void Data Services</span>
+    </a>
+    <button onclick="closeMobileMenu()" class="text-2xl">✕</button>
+  </div>
 
-  <p class="text-slate-400 mb-4">
-    All services are provided based on agreed project scope, timelines, and pricing.
-  </p>
+  <nav class="p-6 space-y-4 text-lg">
+    <a href="index.html" class="block border-b border-slate-800 pb-3">Home</a>
+    <a href="services.html" class="block border-b border-slate-800 pb-3">Services</a>
+    <a href="about.html" class="block border-b border-slate-800 pb-3">About Us</a>
+    <a href="pricing.html" class="block border-b border-slate-800 pb-3">Pricing</a>
+    <a href="faq.html" class="block border-b border-slate-800 pb-3">FAQ</a>
+    <a href="contact.html" class="block border-b border-slate-800 pb-3">Contact</a>
+  </nav>
+</div>
 
-  <p class="text-slate-400 mb-4">
-    Void Data Services is not responsible for indirect or consequential damages.
-  </p>
+<!-- ================= HEADER ================= -->
+<header class="sticky top-0 z-40 bg-slate-900 border-b border-slate-800">
+  <div class="max-w-7xl mx-auto p-5 flex justify-between items-center">
 
-  <p class="text-slate-400">
-    These terms may be updated at any time without prior notice.
-  </p>
+    <a href="index.html" class="flex items-center space-x-3">
+      <img src="logo.png" class="h-9">
+      <span class="text-xl md:text-2xl font-black text-blue-400">
+        Void Data Services
+      </span>
+    </a>
+
+    <div class="flex items-center space-x-4">
+      <button onclick="toggleDarkMode()">🌙</button>
+      <button onclick="openMobileMenu()" class="text-3xl font-bold">&#8942;</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="bg-gradient-to-br from-slate-900 to-slate-950">
+  <div class="max-w-7xl mx-auto p-16">
+    <h1 class="text-5xl font-bold mb-6">Terms & Conditions</h1>
+    <p class="text-slate-400 text-xl max-w-4xl">
+      These Terms & Conditions govern your use of our website and services.
+      By engaging Void Data Services, you agree to these terms.
+    </p>
+  </div>
 </section>
+
+<!-- ================= TERMS CONTENT ================= -->
+<section class="max-w-5xl mx-auto p-16 space-y-8 text-slate-400 leading-relaxed">
+
+  <div>
+    <h2 class="text-2xl font-bold text-white mb-3">1. Definitions</h2>
+    <p>
+      “Company,” “we,” “us,” or “our” refers to Void Data Services.
+      “Client,” “you,” or “your” refers to any individual or organization
+      engaging our services.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-white mb-3">2. Scope of Services</h2>
+    <p>
+      Services are provided based on mutually agreed scope, timelines,
+      deliverables, and pricing. Any additional work outside agreed scope
+      may require a revised quote or written approval.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-white mb-3">3. Client Responsibilities</h2>
+    <p>
+      Clients are responsible for providing accurate information, access to
+      required data, and timely communication to ensure successful delivery.
+      Delays caused by missing information may impact timelines.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-white mb-3">4. Payment Terms</h2>
+    <p>
+      Payment terms are defined in project agreements or invoices.
+      Advance payment may be required for certain projects.
+      Late payments may result in suspension of services.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-white mb-3">5. Confidentiality</h2>
+    <p>
+      Both parties agree to maintain confidentiality of sensitive business
+      and project-related information. Confidential data will be used solely
+      for service delivery purposes.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-white mb-3">6. Data Ownership</h2>
+    <p>
+      All client-provided data remains the property of the client.
+      Void Data Services does not claim ownership of client data.
+      Upon project completion, data may be returned or deleted upon request.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-white mb-3">7. Quality Standards</h2>
+    <p>
+      We commit to delivering services using structured workflows and
+      quality assurance processes. However, no service can guarantee
+      100% error-free results, and reasonable tolerance may apply.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-white mb-3">8. Limitation of Liability</h2>
+    <p>
+      To the maximum extent permitted by law, Void Data Services shall not
+      be liable for indirect, incidental, or consequential damages arising
+      from use of our services or website.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-white mb-3">9. Service Suspension & Termination</h2>
+    <p>
+      We reserve the right to suspend or terminate services in cases of
+      non-payment, breach of terms, or misuse of services.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-white mb-3">10. Intellectual Property</h2>
+    <p>
+      Any templates, workflows, or internal systems developed by Void Data Services
+      remain our intellectual property unless otherwise agreed in writing.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-white mb-3">11. Governing Law</h2>
+    <p>
+      These Terms shall be governed by and interpreted in accordance with
+      the laws of India, without regard to conflict of law principles.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-white mb-3">12. Changes to Terms</h2>
+    <p>
+      We may update these Terms from time to time. Continued use of our
+      website or services constitutes acceptance of updated Terms.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-white mb-3">13. Contact Information</h2>
+    <p>
+      For any questions regarding these Terms & Conditions, please contact:
+    </p>
+    <p class="mt-2">
+      <b>Void Data Services</b><br>
+      Jamshedpur, Jharkhand, India<br>
+      Email: voiddataservices@gmail.com<br>
+      Phone / WhatsApp: +91 8709523430
+    </p>
+  </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-slate-900 border-t border-slate-800">
+  <div class="max-w-7xl mx-auto p-12 grid md:grid-cols-4 gap-8">
+
+    <div>
+      <h3 class="font-bold text-lg mb-4">Void Data Services</h3>
+      <p class="text-slate-400 text-sm">
+        Founder-led digital operations partner delivering high-accuracy data,
+        automation, and digital solutions.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="font-bold mb-3">Services</h4>
+      <ul class="text-slate-400 space-y-2 text-sm">
+        <li>Data Processing</li>
+        <li>Lead Generation</li>
+        <li>Automation</li>
+        <li>Web Development</li>
+        <li>Reporting & MIS</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-bold mb-3">Company</h4>
+      <ul class="text-slate-400 space-y-2 text-sm">
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-bold mb-3">Contact</h4>
+      <ul class="text-slate-400 space-y-2 text-sm">
+        <li>📍 Jamshedpur, Jharkhand, India</li>
+        <li>📧 voiddataservices@gmail.com</li>
+        <li>📞 +91 8709523430</li>
+        <li>💬 WhatsApp Available</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="border-t border-slate-800 text-center text-slate-500 text-sm py-6">
+    © 2026 Void Data Services. All rights reserved.
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+function openMobileMenu(){
+  document.getElementById('mobileMenu').classList.remove('translate-x-full');
+  document.body.style.overflow='hidden';
+}
+function closeMobileMenu(){
+  document.getElementById('mobileMenu').classList.add('translate-x-full');
+  document.body.style.overflow='';
+}
+function toggleDarkMode(){
+  document.documentElement.classList.toggle('dark');
+  localStorage.setItem('theme',
+    document.documentElement.classList.contains('dark')?'dark':'light');
+}
+if(localStorage.getItem('theme')==='dark'){
+  document.documentElement.classList.add('dark');
+}
+</script>
 
 </body>
 </html>
