@@ -324,11 +324,7 @@ function closeMobileMenu(){
   document.getElementById('mobileMenu').classList.add('translate-x-full');
   document.body.style.overflow='';
 }
-function toggleDarkMode(){
-  document.documentElement.classList.toggle('dark');
-  localStorage.setItem('theme',
-    document.documentElement.classList.contains('dark')?'dark':'light');
-}
+
 if(localStorage.getItem('theme')==='dark'){
   document.documentElement.classList.add('dark');
 }
