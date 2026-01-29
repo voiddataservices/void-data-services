@@ -1,47 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Client Portal | Void Data Services</title>
-<link rel="icon" href="favicon.png">
-<script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Portal | Void Data Services</title>
+  <link rel="icon" href="favicon.png">
+
+  <script>tailwind={darkMode:'class'}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-slate-950 text-white">
 
-<section class="max-w-7xl mx-auto p-16">
-  <h1 class="text-4xl font-bold mb-6">Client Portal</h1>
-  <p class="text-slate-400 mb-10">
-    Secure workspace for project updates, files, and communication.
-  </p>
-
-  <div class="grid md:grid-cols-3 gap-8">
-
-    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
-      <h3 class="font-bold mb-2">📁 Project Files</h3>
-      <p class="text-slate-400 text-sm">Upload & download project documents.</p>
+<!-- HEADER (same as other pages) -->
+<header class="border-b border-slate-800 bg-slate-900">
+  <div class="max-w-7xl mx-auto p-6 flex justify-between items-center">
+    <a href="index.html" class="flex items-center space-x-3">
+      <img src="logo.png" class="h-9">
+      <span class="text-2xl font-black text-blue-400">Void Data Services</span>
+    </a>
+    <div class="flex items-center space-x-4">
+      <button onclick="toggleDarkMode()" class="text-xl">🌙</button>
+      <button onclick="openMobileMenu()" class="text-3xl">☰</button>
     </div>
-
-    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
-      <h3 class="font-bold mb-2">📊 Project Status</h3>
-      <p class="text-slate-400 text-sm">View milestones and delivery progress.</p>
-    </div>
-
-    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
-      <h3 class="font-bold mb-2">💬 Communication</h3>
-      <p class="text-slate-400 text-sm">Direct communication with project manager.</p>
-    </div>
-
   </div>
+</header>
 
-  <div class="mt-12 bg-slate-900 border border-slate-800 p-8 rounded-xl text-center">
-    <p class="text-slate-400">
-      Portal authentication system coming soon.
-      For now, please contact us for secure file sharing.
+<!-- HERO -->
+<section class="bg-gradient-to-br from-slate-900 to-slate-950 border-b border-slate-800">
+  <div class="max-w-7xl mx-auto p-16">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Secure Client Portal</h1>
+    <p class="text-slate-400 text-lg max-w-3xl">
+      A dedicated workspace for clients to securely manage projects, exchange files,
+      track progress, and communicate directly with the Void Data Services delivery team.
     </p>
   </div>
 </section>
+
+<!-- PORTAL FEATURES -->
+<section class="max-w-7xl mx-auto p-12">
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <div class="bg-slate-900 border border-slate-800 p-8 rounded-xl">
+      <h3 class="font-bold text-lg mb-2">📁 Secure File Exchange</h3>
+      <p class="text-slate-400 text-sm">
+        Upload and download project files using secure, access-controlled channels.
+        All client data is handled under strict confidentiality protocols.
+      </p>
+    </div>
+
+    <div class="bg-slate-900 border border-slate-800 p-8 rounded-xl">
+      <h3 class="font-bold text-lg mb-2">📊 Project Tracking</h3>
+      <p class="text-slate-400 text-sm">
+        Monitor milestones, delivery status, and timelines in real time to ensure
+        transparency and predictable project execution.
+      </p>
+    </div>
+
+    <div class="bg-slate-900 border border-slate-800 p-8 rounded-xl">
+      <h3 class="font-bold text-lg mb-2">💬 Direct Communication</h3>
+      <p class="text-slate-400 text-sm">
+        Communicate directly with your assigned delivery manager for faster
+        turnaround, priority handling, and clear accountability.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ENTERPRISE NOTICE -->
+  <div class="mt-12 bg-slate-900 border border-slate-800 p-10 rounded-xl text-center">
+    <h3 class="text-2xl font-bold mb-3">🔐 Secure Client Portal — Coming Very Soon</h3>
+
+    <p class="text-slate-400 max-w-3xl mx-auto">
+      We are currently deploying an authenticated client portal with role-based access,
+      activity logging, and enterprise-grade security to support long-term client
+      engagements and recurring projects.
+    </p>
+
+    <p class="text-slate-400 mt-4 max-w-3xl mx-auto">
+      During this rollout phase, all clients are provided with secure file sharing,
+      encrypted communication channels, and direct delivery team access to ensure
+      uninterrupted service.
+    </p>
+
+    <p class="text-slate-400 mt-4 max-w-3xl mx-auto">
+      Once launched, existing clients will receive priority access and onboarding
+      into the secure portal environment.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICE ASSURANCE -->
+<section class="bg-slate-900 border-t border-slate-800">
+  <div class="max-w-6xl mx-auto p-12 text-center">
+    <h2 class="text-3xl font-bold mb-4">Enterprise Delivery Standards</h2>
+    <p class="text-slate-400 max-w-4xl mx-auto">
+      Void Data Services operates under strict delivery workflows, confidentiality
+      policies, and quality assurance processes to ensure every client receives
+      consistent, high-quality service at scale.
+    </p>
+
+    <div class="grid md:grid-cols-4 gap-6 mt-10 text-sm">
+      <div class="bg-slate-950 border border-slate-800 p-5 rounded-lg">ISO-style internal QA workflows</div>
+      <div class="bg-slate-950 border border-slate-800 p-5 rounded-lg">Multi-step validation processes</div>
+      <div class="bg-slate-950 border border-slate-800 p-5 rounded-lg">Confidentiality & NDA-ready operations</div>
+      <div class="bg-slate-950 border border-slate-800 p-5 rounded-lg">Founder-led delivery oversight</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="bg-slate-950 border-t border-slate-800">
+  <div class="max-w-6xl mx-auto p-12 text-center">
+    <h2 class="text-2xl font-bold mb-3">Need secure access for your project?</h2>
+    <p class="text-slate-400 mb-6">
+      Contact our team and we will provision secure communication and file-sharing
+      for your engagement immediately.
+    </p>
+
+    <a href="contact.html"
+       class="bg-blue-600 px-10 py-3 rounded-xl text-lg hover:bg-blue-700">
+      Request Secure Access
+    </a>
+  </div>
+</section>
+
+<!-- SCRIPTS -->
+<script>
+function toggleDarkMode(){
+  const html = document.documentElement;
+  html.classList.toggle('dark');
+  localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+}
+
+(function(){
+  const savedTheme = localStorage.getItem('theme');
+  if(savedTheme === 'light'){
+    document.documentElement.classList.remove('dark');
+  }
+})();
+
+function openMobileMenu(){
+  document.getElementById('mobileMenu')?.classList.remove('translate-x-full');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu(){
+  document.getElementById('mobileMenu')?.classList.add('translate-x-full');
+  document.body.style.overflow = '';
+}
+</script>
 
 </body>
 </html>
