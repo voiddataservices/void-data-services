@@ -143,6 +143,7 @@ class="fixed top-0 right-0 w-80 max-w-full h-full bg-slate-950 border-l border-s
     </a>
   </div>
 </section>
+<div id="footer-placeholder"></div>
 
 <!-- SCRIPTS -->
 <script>
@@ -169,6 +170,22 @@ function closeMobileMenu(){
   document.body.style.overflow = '';
 }
 </script>
+<script>
+async function loadComponent(url, placeholderId) {
+  const res = await fetch(url);
+  const data = await res.text();
+  document.getElementById(placeholderId).innerHTML = data;
+}
 
+loadComponent('header.html', 'header-placeholder');
+loadComponent('footer.html', 'footer-placeholder');
+
+function openMobileMenu(){
+  document.getElementById('mobileMenu').classList.remove('translate-x-full');
+}
+function closeMobileMenu(){
+  document.getElementById('mobileMenu').classList.add('translate-x-full');
+}
+</script>
 </body>
 </html>
