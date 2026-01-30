@@ -64,7 +64,7 @@ class="fixed top-0 right-0 w-80 max-w-full h-full bg-slate-950 border-l border-s
     </a>
 
     <div class="flex items-center space-x-4">
-      <button onclick="toggleDarkMode()">🌙</button>
+     
       <button onclick="openMobileMenu()" class="text-3xl font-bold">&#8942;</button>
     </div>
   </div>
@@ -195,11 +195,7 @@ function closeMobileMenu(){
   document.getElementById('mobileMenu').classList.add('translate-x-full');
   document.body.style.overflow='';
 }
-function toggleDarkMode(){
-  document.documentElement.classList.toggle('dark');
-  localStorage.setItem('theme',
-    document.documentElement.classList.contains('dark')?'dark':'light');
-}
+
 if(localStorage.getItem('theme')==='dark'){
   document.documentElement.classList.add('dark');
 }
