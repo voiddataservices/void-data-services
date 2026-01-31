@@ -1,23 +1,23 @@
-<header class="sticky top-0 z-40 bg-slate-900 border-b border-slate-800">
+<!-- ================= HEADER BANNER ================= -->
+<header class="relative w-full h-24 md:h-28 overflow-hidden border-b border-slate-800">
 
-  <div class="relative w-full">
+  <!-- LOGO AS FULL BANNER -->
+  <img src="logo.png"
+       class="absolute inset-0 w-full h-full object-cover"
+       alt="Void Data Services Logo">
 
-    <!-- FULL WIDTH LOGO -->
-    <a href="index.html">
-      <img src="logo.png"
-           class="w-full h-24 md:h-32 object-contain bg-slate-900">
-    </a>
+  <!-- DARK OVERLAY (optional for readability) -->
+  <div class="absolute inset-0 bg-black/30"></div>
 
-    <!-- CLEAR HAMBURGER MENU -->
-    <button onclick="openMobileMenu()"
-            class="absolute top-4 right-5 z-50 bg-slate-900/80 p-2 rounded-md">
-      <div class="space-y-1.5">
-        <span class="block w-8 h-0.5 bg-white"></span>
-        <span class="block w-8 h-0.5 bg-white"></span>
-        <span class="block w-8 h-0.5 bg-white"></span>
+  <!-- MOBILE MENU BUTTON ON TOP -->
+  <div class="relative max-w-7xl mx-auto h-full flex items-center justify-end px-5">
+    <button onclick="openMobileMenu()" class="hover:opacity-80 transition">
+      <div class="space-y-1">
+        <span class="block w-7 h-0.5 bg-white"></span>
+        <span class="block w-7 h-0.5 bg-white"></span>
+        <span class="block w-7 h-0.5 bg-white"></span>
       </div>
     </button>
-
   </div>
 
 </header>
