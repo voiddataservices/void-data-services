@@ -1,21 +1,21 @@
 <!-- ================= HEADER BANNER ================= -->
 <header class="relative w-full h-24 md:h-28 overflow-hidden border-b border-slate-800">
 
-  <!-- LOGO AS FULL BANNER -->
-  <img src="logo.png"
-       class="absolute inset-0 w-full h-full object-cover"
-       alt="Void Data Services Logo">
-
-  <!-- DARK OVERLAY (optional for readability) -->
-  <div class="absolute inset-0 bg-black/30"></div>
+  <!-- CLICKABLE LOGO BANNER -->
+  <a href="index.html" class="absolute inset-0">
+    <img src="logo.png"
+         class="w-full h-full object-cover"
+         alt="Void Data Services Logo">
+    <div class="absolute inset-0 bg-black/70"></div>
+  </a>
 
   <!-- MOBILE MENU BUTTON ON TOP -->
-  <div class="relative max-w-7xl mx-auto h-full flex items-center justify-end px-5">
+  <div class="relative z-10 max-w-7xl mx-auto h-full flex items-center justify-end px-5">
     <button onclick="openMobileMenu()" class="hover:opacity-80 transition">
       <div class="space-y-1">
-        <span class="block w-7 h-0.5 bg-white"></span>
-        <span class="block w-7 h-0.5 bg-white"></span>
-        <span class="block w-7 h-0.5 bg-white"></span>
+        <span class="block w-8 h-0.5 bg-white"></span>
+        <span class="block w-8 h-0.5 bg-white"></span>
+        <span class="block w-8 h-0.5 bg-white"></span>
       </div>
     </button>
   </div>
