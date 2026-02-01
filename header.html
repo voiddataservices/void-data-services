@@ -1,21 +1,26 @@
 <!-- ================= HEADER BANNER ================= -->
-<header class="w-full h-20 md:h-24 bg-slate-900 border-b border-slate-800 relative overflow-hidden">
+<header class="relative h-28 md:h-32 overflow-hidden">
 
-  <!-- LOGO BANNER (fits perfectly) -->
-  <a href="index.html" class="absolute inset-0">
-    <img src="logo.png"
-         class="w-full h-full object-contain"
-         alt="Void Data Services Logo">
-    <div class="absolute inset-0 bg-black/60"></div>
-  </a>
+  <!-- Banner Logo as Background -->
+  <img src="logo.png"
+       class="absolute inset-0 w-full h-full object-cover brightness-125"
+       alt="Void Data Services Banner">
 
-  <!-- MOBILE MENU -->
-  <div class="relative z-10 h-full flex items-center justify-end px-5">
-    <button onclick="openMobileMenu()" class="space-y-1">
-      <span class="block w-8 h-[2px] bg-white"></span>
-      <span class="block w-8 h-[2px] bg-white"></span>
-      <span class="block w-8 h-[2px] bg-white"></span>
+  <!-- Dark overlay for readability -->
+  <div class="absolute inset-0 bg-slate-950/60"></div>
+
+  <!-- Mobile Menu Button -->
+  <div class="absolute right-6 top-1/2 -translate-y-1/2 z-10">
+    <button onclick="openMobileMenu()" class="hover:opacity-80 transition">
+      <div class="space-y-1">
+        <span class="block w-8 h-0.5 bg-white"></span>
+        <span class="block w-8 h-0.5 bg-white"></span>
+        <span class="block w-8 h-0.5 bg-white"></span>
+      </div>
     </button>
   </div>
+
+  <!-- Clickable area to go Home -->
+  <a href="index.html" class="absolute inset-0 z-0"></a>
 
 </header>
