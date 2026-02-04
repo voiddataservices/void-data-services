@@ -1,20 +1,119 @@
-<header class="sticky top-0 z-40 bg-slate-900 border-b border-slate-800">
-  <div class="max-w-7xl mx-auto p-5 flex justify-between items-center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <!-- Big "V" next to text -->
-    <a href="index.html" class="flex items-center space-x-3">
-      <span class="text-5xl font-extrabold text-blue-400">V</span>
-      <span class="text-2xl md:text-3xl font-bold text-white">Void Data Services</span>
+  <!-- Favicon -->
+  <link rel="icon" type="favicon.png" href="logo.png">
+
+  <!-- Font (Flosum style) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      margin:0;
+      font-family:'Inter',sans-serif;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background: linear-gradient(90deg,#0b1220,#0f172a);
+      border-bottom:1px solid #1f2937;
+    }
+
+    .nav-container{
+      max-width:1200px;
+      margin:auto;
+      padding:18px 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    /* Brand */
+    .brand{
+      display:flex;
+      align-items:center;
+      text-decoration:none;
+      color:white;
+      font-weight:800;
+      letter-spacing:-0.5px;
+      font-size:22px;
+    }
+
+    .brand-v{
+      font-size:32px;
+      margin-right:6px;
+    }
+
+    /* Hamburger */
+    .hamburger{
+      cursor:pointer;
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+
+    .hamburger span{
+      width:30px;
+      height:3px;
+      background:white;
+      border-radius:2px;
+      display:block;
+    }
+
+    /* Mobile menu demo (optional if you already have) */
+    .mobileMenu{
+      position:fixed;
+      top:0;
+      right:-100%;
+      width:260px;
+      height:100vh;
+      background:#0f172a;
+      transition:0.3s;
+      padding:30px;
+    }
+
+    .mobileMenu.open{
+      right:0;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav-container">
+
+    <!-- Brand -->
+    <a href="index.html" class="brand-image">
+  <img src="favicon.png"
+</a>
+    <a href="index.html" class="brand">
+      <span class=>Void Data Services
     </a>
 
-    <!-- Mobile Menu Button -->
-    <button onclick="openMobileMenu()" class="hover:opacity-80 transition">
-      <div class="space-y-1">
-        <span class="block w-7 h-0.5 bg-white"></span>
-        <span class="block w-7 h-0.5 bg-white"></span>
-        <span class="block w-7 h-0.5 bg-white"></span>
-      </div>
-    </button>
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="openMobileMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
   </div>
 </header>
+
+<!-- Optional Mobile Menu -->
+<div id="mobileMenu" class="mobileMenu"></div>
+
+<script>
+  function openMobileMenu(){
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
