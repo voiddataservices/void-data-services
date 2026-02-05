@@ -80,20 +80,42 @@
     .mobileMenu.open{
       right:0;
     }
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background: linear-gradient(90deg,#0b1220,#0f172a);
+  border-bottom:1px solid #1f2937;
+}
+
+.logo{
+  width:36px;
+  height:36px;
+  object-fit:contain;
+  margin-right:10px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  color:white;
+  font-weight:800;
+  font-size:20px;
+}
   </style>
 </head>
 
 <body>
 
-<header>
+
+<header class="site-header">
   <div class="nav-container">
 
-    <!-- Brand -->
-    <a href="index.html" class="brand-image">
-  <img src="favicon.png"
-</a>
+    <!-- Logo + Brand -->
     <a href="index.html" class="brand">
-      <span class=>Void Data Services
+      <img src="favicon.png" alt="Void Logo" class="logo">
+      <span>Void Data Services</span>
     </a>
 
     <!-- Hamburger -->
